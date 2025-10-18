@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../assets/Icon-Images/Nest.svg'
+import logo from '../../../assets/Icon-Images/Nest.svg'
 
 export default function Logo() {
   return (

@@ -3,18 +3,21 @@
 
 .lato-regular {
   font-family: "Lato", sans-serif;
-  font-weight: 400;
   font-optical-sizing: auto;
   font-style: normal;
 }
 .quicksand-regular {
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+
   font-style: normal;
 }
 .primary-text-color {
   color: #3bb77e;
+}
+
+.menu-text-color {
+  color: #253D4E;
 }
 .primary-bg-color {
   background-color: #3bb77e;
@@ -23,7 +26,9 @@
 .secondary-text-color {
   color: #7e7e7e;
 }
-
+.active{
+color: #3bb77e;
+}
 .select {
   &:focus,
   &:focus-within {
@@ -36,9 +41,26 @@
 .select-ghost {
   &:focus,
   &:focus-within {
-    background-color: var(--color-base-100);
     color: #7e7e7e;
     box-shadow: none;
   }
 }
 
+
+.category-class .select-ghost {
+&:focus, &:focus-within {
+background-color:  #3bb77e;
+color: white;
+box-shadow: none;
+}
+}
+
+
+.category-class .select {
+  &:focus,
+  &:focus-within {
+    outline: none;
+    isolation: isolate;
+    z-index: 1;
+  }
+}

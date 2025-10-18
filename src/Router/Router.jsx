@@ -6,6 +6,9 @@ import Home from "../Home_Pages/Home";
 import Wishlist from "../Pages/Wishlist/Wishlist";
 import OrderTracking from "../Pages/Order_Tracking/OrderTracking";
 import Account from "../Pages/My_Account/Account.JSX";
+import Contuct_Us from "../Pages/Contuct_Us/Contuct_Us";
+import Shops from "../Pages/Shops/Shops";
+import Blogs from "../Pages/Blogs/Blogs";
 
 
 const router = createBrowserRouter([
@@ -16,11 +19,20 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        // children: [
-        //   {
-        
-        //   }
-        // ]
+        children: [
+          {
+            path: "/Shops",
+            element: <Shops></Shops>
+          },
+          {
+            path: "/blogs",
+            element: <Blogs></Blogs>
+          },
+          {
+            path: "/contacts",
+            element: <Contuct_Us></Contuct_Us>
+          },
+        ]
       },
       {
         path: "/about_us",

@@ -4,6 +4,7 @@ import NavBar from "./Home-Header/Navbar/NavBar";
 import Sesrch_Fileds from "./Home-Header/Navbar/Sesrch_Fileds";
 import Logo from "./Home-Header/Navbar/Logo";
 import Categories_Nav from "../Components/Categories_Nav";
+import { Outlet } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -15,7 +16,8 @@ export default function Home() {
         <NavBar></NavBar>
       </div>
       <div className="mt-8">
-        <Categories_Nav></Categories_Nav>
+         <Categories_Nav></Categories_Nav>
+
       </div>
     </div>
   );

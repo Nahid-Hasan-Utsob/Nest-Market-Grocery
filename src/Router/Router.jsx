@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router";
-import Layout from "../Layout/Layout";
 import About_us from "../Pages/About_Us/About_us";
 import Home from "../Home_Pages/Home";
 
@@ -9,30 +8,16 @@ import Account from "../Pages/My_Account/Account.JSX";
 import Contuct_Us from "../Pages/Contuct_Us/Contuct_Us";
 import Shops from "../Pages/Shops/Shops";
 import Blogs from "../Pages/Blogs/Blogs";
-
+import Main_Layout from "../Layout/Main_Layout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout></Layout>,
+    element: <Main_Layout></Main_Layout>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        children: [
-          {
-            path: "/Shops",
-            element: <Shops></Shops>
-          },
-          {
-            path: "/blogs",
-            element: <Blogs></Blogs>
-          },
-          {
-            path: "/contacts",
-            element: <Contuct_Us></Contuct_Us>
-          },
-        ]
       },
       {
         path: "/about_us",
@@ -50,6 +35,19 @@ const router = createBrowserRouter([
       {
         path: "/tracking",
         element: <OrderTracking></OrderTracking>,
+      },
+      {
+        path: "/contacts",
+        element: <Contuct_Us></Contuct_Us>,
+      },
+
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
+      },
+      {
+        path: "/Shops",
+        element: <Shops></Shops>,
       },
     ],
   },

@@ -51,6 +51,12 @@ export default function Categories_Nav() {
             </NavLink>
             <NavLink
               className={"text-base quicksand-regular  font-bold px-4 bg-red"}
+              to={"/blogs"}
+            >
+              Blogs
+            </NavLink>
+            <NavLink
+              className={"text-base quicksand-regular  font-bold px-4 bg-red"}
               to={"/contacts"}
             >
               Contacts

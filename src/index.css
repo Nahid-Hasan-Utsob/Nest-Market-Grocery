@@ -55,6 +55,14 @@ box-shadow: none;
 }
 }
 
+.main-category-class .select-ghost {
+&:focus, &:focus-within {
+background-color:  white;
+  color: #253D4E;
+box-shadow: none;
+}
+}
+
 
 .category-class .select {
   &:focus,

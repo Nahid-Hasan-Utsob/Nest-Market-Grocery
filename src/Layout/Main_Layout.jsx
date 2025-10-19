@@ -14,7 +14,7 @@ export default function Main_Layout() {
 
 
   return (
-    <div className="lato-regular max-w-[1500px] mx-auto">
+    <div className="lato-regular max-w-[1500px] mx-auto ">
      {!hideNav && <Category_Nav></Category_Nav>}
      {!hideNav &&  <Search_Cart_Nav></Search_Cart_Nav>}
 

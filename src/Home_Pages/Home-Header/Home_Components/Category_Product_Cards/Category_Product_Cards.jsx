@@ -11,7 +11,7 @@ export default function Category_Product_Cards() {
       .catch(err => console.error(err));
   }, []);
 
-  console.log(categories);
+  // console.log(categories);
   
   return (
     <section className='mt-4 flex items-center justify-around gap-7'>

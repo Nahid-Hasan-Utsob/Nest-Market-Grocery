@@ -1,6 +1,8 @@
 @plugin "daisyui";
 @import "tailwindcss";
 
+
+
 .lato-regular {
   font-family: "Lato", sans-serif;
   font-optical-sizing: auto;

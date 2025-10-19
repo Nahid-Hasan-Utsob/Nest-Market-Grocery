@@ -37,8 +37,12 @@ export default function RandomProductsSection({ products }) {
   }, [products]);
 
   return (
-    <section className=" mx-auto ">
-      <h2 className="text-2xl font-semibold mb-6">Random Picks</h2>
+    <section >
+     <div className="py-4">
+         <p className="menu-text-color text-3xl font-bold quicksand-regular">
+         Today Best Selling Products
+        </p>
+      </div>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 items-center justify-center">
         {dailyProducts.map((product) => (
           <Home_Random_Cards key={product.id} product={product} />

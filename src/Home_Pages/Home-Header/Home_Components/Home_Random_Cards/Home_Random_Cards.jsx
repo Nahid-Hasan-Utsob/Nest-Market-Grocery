@@ -88,7 +88,7 @@ export default function Home_Random_Cards({ product }) {
   else if (discountPercentage >= 20) discountColor = "bg-green-500";
 
   return (
-    <div className="max-w-xs mx-auto rounded-xl shadow-xl overflow-hidden bg-white ">
+    <div className="max-w-xs mx-auto rounded-xl shadow-xl overflow-hidden bg-white mt-5 ">
       {/* Product Image and Discount */}
       <div className="relative p-6 pb-0">
         {discountPercentage > 0 && (

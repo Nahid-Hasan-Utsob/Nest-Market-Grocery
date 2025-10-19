@@ -72,3 +72,7 @@ box-shadow: none;
     z-index: 1;
   }
 }
+
+.card-bg-color{
+  background-color: #F4F6FA;
+}

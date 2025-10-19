@@ -87,7 +87,7 @@ export default function Carousel() {
               <img
                 src={slide.img}
                 alt={`Slide ${i + 1}`}
-                className="w-full h-[550px] object-cover rounded-2xl"
+                className="w-full h-[500px] object-cover rounded-2xl"
               />
               {/* overlay text + button */}
               <div className="absolute inset-0 bg-black/40  rounded-2xl  text-white">

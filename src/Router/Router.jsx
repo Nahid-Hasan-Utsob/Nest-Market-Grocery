@@ -17,6 +17,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        loader: async () => {
+          const res = await fetch("https://dummyjson.com/products");
+          const data = await res.json();
+          return data;
+        },
         element: <Home></Home>,
       },
       {

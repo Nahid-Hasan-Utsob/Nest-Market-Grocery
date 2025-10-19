@@ -36,16 +36,20 @@ export default function Home_Popular_main({ children }) {
   console.log(products);
 
   return (
-    
-    <section className="max-w-[1400px] mx-auto py-8 px-4">
+    <section className=" py-8 ">
+      <div className="pb-4">
+         <p className="menu-text-color text-3xl font-bold quicksand-regular">
+         Shop By Categories ({categories.length})
+        </p>
+      </div>
       {/* Category Buttons */}
-      <div className="flex flex-wrap gap-3 mb-6">
+      <div className="flex flex-wrap gap-3 mb-6 quicksand-regular  font-semibold">
         <button
           onClick={() => setSelectedCategory("all")}
-          className={`px-4 py-2 rounded-md border ${
+          className={`px-4 py-2 rounded-md  ${
             selectedCategory === "all"
               ? "bg-blue-600 text-white"
-              : "bg-white text-gray-700"
+              : "bg-white menu-text-color "
           }`}
         >
           All
@@ -55,10 +59,10 @@ export default function Home_Popular_main({ children }) {
           <button
             key={i}
             onClick={() => setSelectedCategory(cat.slug)}
-            className={`px-4 py-2 rounded-md border capitalize ${
+            className={` p-1 rounded-md  capitalize ${
               selectedCategory === cat.slug
-                ? "bg-blue-600 text-white"
-                : "bg-white text-gray-700"
+                ? "primary-text-color text-white"
+                : "bg-white menu-text-color "
             }`}
           >
             {cat.name}
@@ -66,9 +70,11 @@ export default function Home_Popular_main({ children }) {
         ))}
       </div>
       <div className="grid lg:grid-cols-4 gap-5 md:grid-cols-2 grid-cols-1">
-        {products.slice(0, 8).map((product) => (
-          <ProductCard product={product}></ProductCard>
-        ))}
+        {(selectedCategory === "all" ? products.slice(0, 8) : products).map(
+          (product) => (
+            <ProductCard key={product.id} product={product} />
+          )
+        )}
       </div>
     </section>
   );

@@ -1,8 +1,8 @@
 import React from "react";
-import Caro_Search from "../../../../Components/Caro_Search";
-import deliveryMan from "../../../../assets/Icon-Images/alt (13).png";
+import Caro_Search from "./Caro_Search";
+import deliveryMan from "../assets/Icon-Images/alt (13).png";
 
-export default function Home_Footer_Banner() {
+export default function Footer_Banner() {
   return (
     <section>
       <div className="relative bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 overflow-hidden rounded-2xl">

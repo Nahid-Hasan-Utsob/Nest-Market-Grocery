@@ -12,8 +12,6 @@ import Home_Banner from "./Home-Header/Home_Components/Home_Banner";
 import Home_Popular_main from "./Home-Header/Home_Components/Home_Popular/Home_P_Cards/Home_P_Cards";
 import Random_Main_Page from "./Home-Header/Home_Components/Home_Random_Cards/Random_Main_Page";
 import Random_Tending_Main from "./Home-Header/Home_Components/Random_Tranding_Product/Random_Tending_Main";
-import Home_Footer_Banner from "./Home-Header/Home_Components/Home_Footer_Banner/Home_Footer_Banner";
-
 
 export default function Home() {
   const products = useLoaderData();
@@ -39,7 +37,6 @@ export default function Home() {
           <Home_Popular_main></Home_Popular_main>
           <Random_Main_Page></Random_Main_Page>
           <Random_Tending_Main></Random_Tending_Main>
-          <Home_Footer_Banner></Home_Footer_Banner>
     </div>
       </div>
     </div>

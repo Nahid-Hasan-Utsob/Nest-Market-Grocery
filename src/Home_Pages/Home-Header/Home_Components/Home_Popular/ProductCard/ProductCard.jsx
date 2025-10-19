@@ -88,7 +88,7 @@ export default function ProductCard({ product }) {
   else if (discountPercentage >= 20) discountColor = "bg-green-500";
 
   return (
-    <div className="max-w-xs rounded-xl shadow-xl overflow-hidden bg-white ">
+    <div className="max-w-xs mx-auto rounded-xl shadow-xl overflow-hidden bg-white ">
       {/* Product Image and Discount */}
       <div className="relative p-6 pb-0">
         {discountPercentage > 0 && (

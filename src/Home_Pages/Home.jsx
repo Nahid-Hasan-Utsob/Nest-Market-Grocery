@@ -10,6 +10,7 @@ import Home_Featured from "./Home-Header/Home_Components/Home_Featured";
 import Category_Product_Cards from "./Home-Header/Home_Components/Category_Product_Cards/Category_Product_Cards";
 import Home_Banner from "./Home-Header/Home_Components/Home_Banner";
 import Home_Popular_main from "./Home-Header/Home_Components/Home_Popular/Home_P_Cards/Home_P_Cards";
+import Random_Main_Page from "./Home-Header/Home_Components/Home_Random_Cards/Random_Main_Page";
 
 
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
           <Category_Product_Cards></Category_Product_Cards>
           <Home_Banner></Home_Banner>
           <Home_Popular_main></Home_Popular_main>
+          <Random_Main_Page></Random_Main_Page>
     </div>
       </div>
     </div>

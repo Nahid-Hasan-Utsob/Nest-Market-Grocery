@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Home_Random_Cards from "../Home_Random_Cards";
-
-
+import Card_Button from "../../../../../Components/Card_Button";
 export default function RandomProductsSection({ products }) {
   const [dailyProducts, setDailyProducts] = useState([]);
 
@@ -36,17 +35,53 @@ export default function RandomProductsSection({ products }) {
     return () => clearInterval(interval);
   }, [products]);
 
+  const banners = [
+    {
+      img: `https://cdn.pixabay.com/photo/2023/12/15/18/07/bean-8451254_1280.jpg`,
+      title: `Bring nature into your home`,
+      button: "Shop Now",
+    },
+  ];
+
   return (
-    <section >
-     <div className="py-4">
-         <p className="menu-text-color text-3xl font-bold quicksand-regular">
-         Today Best Selling Products
+    <section>
+      <div className="py-4">
+        <p className="menu-text-color text-3xl font-bold quicksand-regular">
+          Today Best Selling Products
         </p>
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 items-center justify-center">
-        {dailyProducts.map((product) => (
-          <Home_Random_Cards key={product.id} product={product} />
-        ))}
+      <div className="flex justify-around items-center gap-7 h-full">
+        <div className="h-[400px] mr-2">
+          {banners.map((item, index) => (
+            <div
+              key={index}
+              className="relative h-full rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+            >
+              {/* Background Image */}
+              <img
+                src={item.img}
+                alt={item.title}
+                className="w-full h-full object-fill transition-transform duration-500 group-hover:scale-105"
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0  group-hover:bg-black/50 transition-all duration-300"></div>
+
+              {/* Text + Button */}
+              <div className="quicksand-regular text-2xl  w-2/3 font-bold absolute inset-0 flex flex-col justify-center items-start  px-8 z-10">
+                <h2 className="text-5xl font-bold mb-3 leading-snug">
+                  {item.title}
+                </h2>
+                <Card_Button text="Shop Now" className={"mt-3"}></Card_Button>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 items-center justify-center">
+          {dailyProducts.map((product) => (
+            <Home_Random_Cards key={product.id} product={product} />
+          ))}
+        </div>
       </div>
     </section>
   );

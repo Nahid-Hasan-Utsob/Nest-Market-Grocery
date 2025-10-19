@@ -5,6 +5,7 @@ import Sesrch_Fileds from "./Home-Header/Navbar/Sesrch_Fileds";
 import Logo from "./Home-Header/Navbar/Logo";
 import Categories_Nav from "../Components/Categories_Nav";
 import { Outlet } from "react-router-dom";
+import Autoplay_Carousel from "./Home-Header/Home_Components/Carousel";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
       </div>
       <div className="mt-8">
          <Categories_Nav></Categories_Nav>
-
+          <Autoplay_Carousel></Autoplay_Carousel>
       </div>
     </div>
   );

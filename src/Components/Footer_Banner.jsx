@@ -20,17 +20,17 @@ export default function Footer_Banner() {
         <div className="absolute inset-0  rounded-2xl"></div>
 
         {/* Text + Search */}
-        <div className="relative flex flex-col justify-center items-start h-[500px] pl-16 gap-10 z-10">
+        <div className="relative flex flex-col justify-center items-start lg:h-[500px] h-[250px] lg:pl-16 pl-5 gap-2 lg:gap-10 z-10">
           <div>
-            <h2 className="text-6xl font-semibold mb-4 menu-text-color  quicksand-regular w-3/5 leading-snug">
+            <h2 className="lg:text-6xl md:text-3xl text-xl font-semibold lg:mb-4 menu-text-color  quicksand-regular w-3/5 leading-snug">
               Stay home & get your daily needs from our shop
             </h2>
-            <p className="secondary-text-color text-lg mt-3">
+             <h1 className="text-white md:mt-8 md:text-base text-xs md:pt-0 pt-2 ">
              Start Your Daily Shopping with <span className="primary-text-color ">Nest Mart</span>
-            </p>
+            </h1>
           </div>
 
-          <div>
+          <div className="z-30">
             <Caro_Search  />
           </div>
         </div>
@@ -39,7 +39,7 @@ export default function Footer_Banner() {
         <img
           src={deliveryMan}
           alt="Delivery Man"
-          className="absolute bottom-0 right-0 w-[450px] h-auto object-contain z-20"
+          className="absolute bottom-0 right-0 w-[200px] lg:w-[450px] h-auto object-contain "
         />
       </div>
     </section>

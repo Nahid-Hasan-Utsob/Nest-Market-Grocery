@@ -25,9 +25,9 @@ export default function NavBar() {
         </div>
         <div className="flex items-center gap-3 secondary-text-color ato-regular   text-base]">
           <div className="relative inline-block">
-            <FiHeart className="w-7 h-7  text-black" />
+            <FiHeart className="lg:w-7 lg:h-7 w-6 h-6  text-black" />
 
-            <span className="absolute -top-1 -right-1 primary-bg-color  text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
+            <span className="absolute lg:-top-1 -top-2 -right-1 primary-bg-color  text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
               1
             </span>
           </div>
@@ -36,9 +36,9 @@ export default function NavBar() {
        <Link to={'/cart'}>
         <div className="flex items-center gap-3 secondary-text-color ato-regular   text-base]">
           <div className="relative inline-block">
-            <BsCart3 className="w-7 h-7  text-black" />
+            <BsCart3 className="lg:w-7 lg:h-7 w-6 h-6  text-black" />
 
-            <span className="absolute -top-1 -right-1 primary-bg-color  text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
+            <span className="absolute lg:-top-1 -top-2 -right-1 primary-bg-color  text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
               {cart.length}
             </span>
           </div>

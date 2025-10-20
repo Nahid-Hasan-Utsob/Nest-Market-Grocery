@@ -19,7 +19,7 @@ import visa from "../assets/Icon-Images/img (2).png";
 export default function Footer_Bottom() {
   return (
     <footer className="bg-white">
-      <div className=" mx-auto px-6 py-10 grid md:grid-cols-6 sm:grid-cols-2 gap-8 ">
+      <div className="lg:px-6 lg:py-10 py-5 grid lg:grid-cols-6 grid-cols-3 lg:gap-8  gap-2">
         {/* Logo & Info */}
         <div>
           <div className="flex items-center gap-2 mb-8">

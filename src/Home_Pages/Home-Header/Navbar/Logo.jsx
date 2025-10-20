@@ -4,7 +4,7 @@ import logo from '../../../assets/Icon-Images/Nest.svg'
 export default function Logo() {
   return (
     <div>
-      <img src={logo} alt="" />
+      <img className='lg:w-full w-[110px]' src={logo} alt="" />
     </div>
   )
 }

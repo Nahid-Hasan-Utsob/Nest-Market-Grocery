@@ -4,7 +4,7 @@ import NavBar from "./Home-Header/Navbar/NavBar";
 import Sesrch_Fileds from "./Home-Header/Navbar/Sesrch_Fileds";
 import Logo from "./Home-Header/Navbar/Logo";
 import Categories_Nav from "../Components/Categories_Nav";
-import { Outlet, useLoaderData } from "react-router-dom";
+import { Outlet, ScrollRestoration, useLoaderData } from "react-router-dom";
 import Autoplay_Carousel from "./Home-Header/Home_Components/Carousel";
 import Home_Featured from "./Home-Header/Home_Components/Home_Featured";
 import Category_Product_Cards from "./Home-Header/Home_Components/Category_Product_Cards/Category_Product_Cards";
@@ -12,6 +12,7 @@ import Home_Banner from "./Home-Header/Home_Components/Home_Banner";
 import Home_Popular_main from "./Home-Header/Home_Components/Home_Popular/Home_P_Cards/Home_P_Cards";
 import Random_Main_Page from "./Home-Header/Home_Components/Home_Random_Cards/Random_Main_Page";
 import Random_Tending_Main from "./Home-Header/Home_Components/Random_Tranding_Product/Random_Tending_Main";
+import ScrollToTop from "../Layout/ScrollToTop";
 
 export default function Home() {
   const products = useLoaderData();
@@ -30,7 +31,7 @@ export default function Home() {
         <Categories_Nav></Categories_Nav>
         <Autoplay_Carousel></Autoplay_Carousel>
     <div className="">
-      
+
           <Home_Featured categories={categories} ></Home_Featured>
           <Category_Product_Cards></Category_Product_Cards>
           <Home_Banner></Home_Banner>

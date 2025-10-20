@@ -4,6 +4,7 @@ import Search_Cart_Nav from "../Components/Search_Cart_Nav";
 import Footer_Banner from "../Components/Footer_Banner";
 import Footer_Bottom from "../Components/Footer_Bottom";
 
+
 export default function Main_Layout() {
   //hide component from pages
   const location = useLocation();
@@ -16,13 +17,21 @@ export default function Main_Layout() {
 
 
   return (
+ 
     <div className="lato-regular max-w-[1550px] mx-auto ">
+
      {!hideNav && <Category_Nav></Category_Nav>}
      {!hideNav &&  <Search_Cart_Nav></Search_Cart_Nav>}
 
-      <Outlet></Outlet>
-     <Footer_Banner></Footer_Banner>
+<div>
+
+         
+        <Outlet></Outlet>
+</div>
+    <div>
+       <Footer_Banner></Footer_Banner>
      <Footer_Bottom></Footer_Bottom>
+    </div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../../../../Context/CartContext";
+import { Link } from "react-router-dom";
 
 export default function Home_Random_Cards({ product }) {
   const {
@@ -16,6 +17,7 @@ export default function Home_Random_Cards({ product }) {
 
 
   const { addToCart } = useContext(CartContext);
+
   // {{
   //     "id": 1,
   //     "title": "Essence Mascara Lash Princess",
@@ -92,8 +94,12 @@ export default function Home_Random_Cards({ product }) {
   else if (discountPercentage >= 20) discountColor = "bg-green-500";
 
   return (
-    <div className="max-w-xs mx-auto rounded-xl shadow-xl overflow-hidden bg-white mt-5 ">
+    <div className="rounded-xl shadow-xl overflow-hidden bg-white mt-5 ">
       {/* Product Image and Discount */}
+
+  <Link to={`/product/${product.id}`} scroll={'false'}>
+
+
       <div className="relative p-6 pb-0">
         {discountPercentage > 0 && (
           <div
@@ -119,6 +125,7 @@ export default function Home_Random_Cards({ product }) {
         </h2>
 
         {/* Rating */}
+
         <div className="flex items-center mb-2">
           <div className="flex text-yellow-500 text-base mr-2">
             {Array(fullStars)
@@ -185,8 +192,12 @@ export default function Home_Random_Cards({ product }) {
             </p>
           </div>
         </div>
+
+
+      </div>
+      </Link>
         {/* Price & Add Button */}
-        <div onClick={() => addToCart(product)} className="flex  w-full items-center pt-3 border-t border-gray-100">
+        <div onClick={() => addToCart(product)} className="flex  w-full items-center px-3 pb-3 border-t border-gray-100">
           <button className="flex items-center justify-center px-4  py-2 primary-bg-color  text-white font-semibold rounded-lg hover:bg-green-200 transition duration-150 quicksand-regular w-full">
             <svg
               className="w-5 h-5 mr-1"
@@ -205,7 +216,6 @@ export default function Home_Random_Cards({ product }) {
             Add
           </button>
         </div>
-      </div>
     </div>
   );
 }

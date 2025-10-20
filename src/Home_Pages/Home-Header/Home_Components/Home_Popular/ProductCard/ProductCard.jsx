@@ -98,7 +98,7 @@ export default function ProductCard({ product }) {
 
     <div className=" rounded-xl shadow-xl overflow-hidden bg-white ">
       {/* Product Image and Discount */}
-       <Link to={`/product/${product.id}`} scroll={false}>
+       <Link to={`/product/${product.id}`} scroll={'false'}>
       <div className="relative p-6 pb-0">
         {discountPercentage > 0 && (
           <div

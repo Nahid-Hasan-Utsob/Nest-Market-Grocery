@@ -15,68 +15,67 @@ export default function ProductCard({ product }) {
     stock,
   } = product;
 
-
   const { addToCart } = useContext(CartContext);
-// {{
-//     "id": 1,
-//     "title": "Essence Mascara Lash Princess",
-//     "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
-//     "category": "beauty",
-//     "price": 9.99,
-//     "discountPercentage": 10.48,
-//     "rating": 2.56,
-//     "stock": 99,
-//     "tags": [
-//         "beauty",
-//         "mascara"
-//     ],
-//     "brand": "Essence",
-//     "sku": "BEA-ESS-ESS-001",
-//     "weight": 4,
-//     "dimensions": {
-//         "width": 15.14,
-//         "height": 13.08,
-//         "depth": 22.99
-//     },
-//     "warrantyInformation": "1 week warranty",
-//     "shippingInformation": "Ships in 3-5 business days",
-//     "availabilityStatus": "In Stock",
-//     "reviews": [
-//         {
-//             "rating": 3,
-//             "comment": "Would not recommend!",
-//             "date": "2025-04-30T09:41:02.053Z",
-//             "reviewerName": "Eleanor Collins",
-//             "reviewerEmail": "eleanor.collins@x.dummyjson.com"
-//         },
-//         {
-//             "rating": 4,
-//             "comment": "Very satisfied!",
-//             "date": "2025-04-30T09:41:02.053Z",
-//             "reviewerName": "Lucas Gordon",
-//             "reviewerEmail": "lucas.gordon@x.dummyjson.com"
-//         },
-//         {
-//             "rating": 5,
-//             "comment": "Highly impressed!",
-//             "date": "2025-04-30T09:41:02.053Z",
-//             "reviewerName": "Eleanor Collins",
-//             "reviewerEmail": "eleanor.collins@x.dummyjson.com"
-//         }
-//     ],
-//     "returnPolicy": "No return policy",
-//     "minimumOrderQuantity": 48,
-//     "meta": {
-//         "createdAt": "2025-04-30T09:41:02.053Z",
-//         "updatedAt": "2025-04-30T09:41:02.053Z",
-//         "barcode": "5784719087687",
-//         "qrCode": "https://cdn.dummyjson.com/public/qr-code.png"
-//     },
-//     "images": [
-//         "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp"
-//     ],
-//     "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
-// }}
+  // {{
+  //     "id": 1,
+  //     "title": "Essence Mascara Lash Princess",
+  //     "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+  //     "category": "beauty",
+  //     "price": 9.99,
+  //     "discountPercentage": 10.48,
+  //     "rating": 2.56,
+  //     "stock": 99,
+  //     "tags": [
+  //         "beauty",
+  //         "mascara"
+  //     ],
+  //     "brand": "Essence",
+  //     "sku": "BEA-ESS-ESS-001",
+  //     "weight": 4,
+  //     "dimensions": {
+  //         "width": 15.14,
+  //         "height": 13.08,
+  //         "depth": 22.99
+  //     },
+  //     "warrantyInformation": "1 week warranty",
+  //     "shippingInformation": "Ships in 3-5 business days",
+  //     "availabilityStatus": "In Stock",
+  //     "reviews": [
+  //         {
+  //             "rating": 3,
+  //             "comment": "Would not recommend!",
+  //             "date": "2025-04-30T09:41:02.053Z",
+  //             "reviewerName": "Eleanor Collins",
+  //             "reviewerEmail": "eleanor.collins@x.dummyjson.com"
+  //         },
+  //         {
+  //             "rating": 4,
+  //             "comment": "Very satisfied!",
+  //             "date": "2025-04-30T09:41:02.053Z",
+  //             "reviewerName": "Lucas Gordon",
+  //             "reviewerEmail": "lucas.gordon@x.dummyjson.com"
+  //         },
+  //         {
+  //             "rating": 5,
+  //             "comment": "Highly impressed!",
+  //             "date": "2025-04-30T09:41:02.053Z",
+  //             "reviewerName": "Eleanor Collins",
+  //             "reviewerEmail": "eleanor.collins@x.dummyjson.com"
+  //         }
+  //     ],
+  //     "returnPolicy": "No return policy",
+  //     "minimumOrderQuantity": 48,
+  //     "meta": {
+  //         "createdAt": "2025-04-30T09:41:02.053Z",
+  //         "updatedAt": "2025-04-30T09:41:02.053Z",
+  //         "barcode": "5784719087687",
+  //         "qrCode": "https://cdn.dummyjson.com/public/qr-code.png"
+  //     },
+  //     "images": [
+  //         "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp"
+  //     ],
+  //     "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
+  // }}
   // Rating stars logic (round to nearest half)
   const roundedRating = Math.round(rating * 2) / 2; // nearest 0.5
   const fullStars = Math.floor(roundedRating);
@@ -91,117 +90,126 @@ export default function ProductCard({ product }) {
     discountColor = "bg-orange-500";
   else if (discountPercentage >= 18) discountColor = "bg-emerald-500";
   else if (discountPercentage >= 20) discountColor = "bg-green-500";
-  
 
   return (
-     
-
     <div className=" rounded-xl shadow-xl overflow-hidden bg-white ">
       {/* Product Image and Discount */}
-       <Link to={`/product/${product.id}`} scroll={'false'}>
-      <div className="relative p-6 pb-0">
-        {discountPercentage > 0 && (
-          <div
-            className={`absolute top-0 left-0 text-white text-xs font-bold px-3 py-1 rounded-br-lg rounded-tl-xl z-10 ${discountColor}`}
-          >
-            {discountPercentage.toFixed(0)}%
+      <Link to={`/product/${product.id}`} scroll={"false"}>
+        <div className="relative lg:p-6 p-3 pb-0">
+          {discountPercentage > 0 && (
+            <div
+              className={`absolute top-0 left-0 text-white lg:text-xs text-[9px] font-bold px-3 py-1 rounded-br-lg rounded-tl-xl z-10 ${discountColor}`}
+            >
+              {discountPercentage.toFixed(0)}%
+            </div>
+          )}
+
+          <div className="flex justify-center items-center lg:h-52 h-[110px]">
+            <img
+              src={thumbnail}
+              alt={title}
+              className="h-full object-contain rounded-lg"
+            />
           </div>
-        )}
-
-        <div className="flex justify-center items-center h-52">
-          <img
-            src={thumbnail}
-            alt={title}
-            className="h-full object-contain rounded-lg"
-          />
-        </div>
-      </div>
-
-      {/* Product Details */}
-      <div className="p-4 pt-6">
-        <p className="secondary-text-color text-sm mb-1 capitalize lato-regular ">{category}</p>
-
-        <h2 className="menu-text-color  text-lg font-semibold mb-3 quicksand-regular">{title}</h2>
-
-        {/* Rating */}
-        <div className="flex items-center mb-2">
-          <div className="flex text-yellow-500 text-base mr-2">
-            {Array(fullStars)
-              .fill(0)
-              .map((_, i) => (
-                <span key={`full-${i}`}>&#9733;</span>
-              ))}
-            {halfStar === 1 && <span>&#189;</span>} {/* half star */}
-            {Array(emptyStars)
-              .fill(0)
-              .map((_, i) => (
-                <span key={`empty-${i}`} className="text-gray-300">
-                  &#9733;
-                </span>
-              ))}
-          </div>
-          <span className="secondary-text-color text-sm ">{rating.toFixed(1)}</span>
         </div>
 
-        {/* Brand */}
-      <div className="flex justify-between items-center">
+        {/* Product Details */}
+        <div className="lg:p-4 p-2 lg:pt-6 pt-3">
+          <p className="secondary-text-color lg:text-sm text-[9px] mb-1 capitalize lato-regular ">
+            {category}
+          </p>
+
+          <h2 className="menu-text-color  lg:text-lg font-semibold text-[13px] mb-1  lg:mb-3 quicksand-regular">
+            {title}
+          </h2>
+
+          {/* Rating */}
+          <div className="flex items-center lg:mb-2 mb-1">
+            <div className="flex text-yellow-500 text-base mr-2 text-[10px] lg:text-base ">
+              {Array(fullStars)
+                .fill(0)
+                .map((_, i) => (
+                  <span key={`full-${i}`}>&#9733;</span>
+                ))}
+              {halfStar === 1 && <span>&#189;</span>} {/* half star */}
+              {Array(emptyStars)
+                .fill(0)
+                .map((_, i) => (
+                  <span key={`empty-${i}`} className="text-gray-300">
+                    &#9733;
+                  </span>
+                ))}
+            </div>
+            <span className="secondary-text-color lg:text-sm text-[10px]">
+              {rating.toFixed(1)}
+            </span>
+          </div>
+
+          {/* Brand */}
+          <div className="flex justify-between items-center">
             <div>
               {brand && (
-          <p className="secondary-text-color font-bold text-base  quicksand-regular ">
-            By <span className="primary-text-color font-bold quicksand-regular ">{brand}</span>
-          </p>
-        )}
-      </div>
-      <div>
-         
-         {
-            stock ?     <p className="secondary-text-color font-bold text-base  quicksand-regular " >
-            In-Stock <span className="primary-text-color font-bold quicksand-regular ">{stock}</span>
-          </p> :    <p className="text-red-500 font-bold text-base  quicksand-regular " >
-           Out Of Stock</p>
-         }
-     
-      </div>
-      </div>
-
-
-        
-        {/* Price & Add Button */}
-       
-      </div>
-</Link>
-
-       <div className="flex justify-between items-center py-3 px-3 border-t border-gray-200">
-          <div className="flex items-baseline">
-            <span className="text-lg font-bold text-green-600 mr-2">
-              ${price.toFixed(2)}
-            </span>
-            {discountPercentage > 0 && (
-              <span className="text-sm text-gray-400 line-through">
-                ${(price / (1 - discountPercentage / 100)).toFixed(2)}
-              </span>
-            )}
+                <p className="secondary-text-color font-bold lg:text-base text-[10px]  quicksand-regular ">
+                  By{" "}
+                  <span className="primary-text-color font-bold quicksand-regular ">
+                    {brand}
+                  </span>
+                </p>
+              )}
+            </div>
+            <div>
+              {stock ? (
+                <p className="secondary-text-color font-bold quicksand-regular lg:text-base text-[10px]">
+                  In-Stock{" "}
+                  <span className="primary-text-color font-bold quicksand-regular ">
+                    {stock}
+                  </span>
+                </p>
+              ) : (
+                <p className="text-red-500 font-bold text-base  quicksand-regular lg:text-base text-[10px]">
+                  Out Of Stock
+                </p>
+              )}
+            </div>
           </div>
 
-          <button onClick={() => addToCart(product)} className="flex items-center justify-center px-4  py-2 bg-green-100 text-green-600 font-semibold rounded-lg hover:bg-green-200 transition duration-150 quicksand-regular ">
-            <svg
-              className="w-5 h-5 mr-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-              ></path>
-            </svg>
-            Add
-          </button>
+          {/* Price & Add Button */}
         </div>
+      </Link>
+
+      <div className="flex justify-between items-center lg:py-3 lg:px-3 py-1 px-2 border-t border-gray-200">
+        <div className="flex items-baseline">
+          <span className="lg:text-lg text-[12px] font-bold text-green-600 lg:mr-2 mr-1">
+            ${price.toFixed(2)}
+          </span>
+          {discountPercentage > 0 && (
+            <span className="lg:text-sm text-[10px] text-gray-400 line-through">
+              ${(price / (1 - discountPercentage / 100)).toFixed(2)}
+            </span>
+          )}
+        </div>
+
+        <button
+          onClick={() => addToCart(product)}
+          className="flex items-center justify-center lg:px-4  lg:py-2 px-2 py-1 bg-green-100 text-green-600 font-semibold lg:text-base text-[13px] rounded-lg hover:bg-green-200 transition duration-150 quicksand-regular "
+        >
+          <svg
+            className="lg:w-5 lg:h-5 w-3 h-3 mr-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+            ></path>
+          </svg>
+          Add
+        </button>
+      </div>
     </div>
-    
   );
 }

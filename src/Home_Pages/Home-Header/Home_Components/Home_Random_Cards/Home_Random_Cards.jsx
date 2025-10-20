@@ -94,46 +94,44 @@ export default function Home_Random_Cards({ product }) {
   else if (discountPercentage >= 20) discountColor = "bg-green-500";
 
   return (
-    <div className="rounded-xl shadow-xl overflow-hidden bg-white mt-5 ">
-      {/* Product Image and Discount */}
-
-  <Link to={`/product/${product.id}`} scroll={'false'}>
-
-
-      <div className="relative p-6 pb-0">
-        {discountPercentage > 0 && (
-          <div
-            className={`absolute top-0 left-0 text-white text-xs font-bold px-3 py-1 rounded-br-lg rounded-tl-xl z-10 ${discountColor}`}
-          >
-            {discountPercentage.toFixed(0)}%
-          </div>
-        )}
-
-        <div className="flex justify-center items-center h-52">
-          <img
-            src={thumbnail}
-            alt={title}
-            className="h-full object-contain rounded-lg"
-          />
+ <div className="rounded-xl shadow-xl overflow-hidden bg-white mt-5 flex flex-col min-h-[320px] md:min-h-[400px] lg:min-h-[450px] w-full">
+  <Link
+    to={`/product/${product.id}`}
+    scroll={'false'}
+    className="flex-grow flex flex-col"
+  >
+    <div className="relative lg:p-6 p-3 pb-0 flex-grow">
+      {discountPercentage > 0 && (
+        <div
+          className={`absolute top-0 left-0 text-white lg:text-xs text-[9px] font-bold px-6 py-1 rounded-br-lg rounded-tl-xl z-10 ${discountColor}`}
+        >
+          {discountPercentage.toFixed(0)}%
         </div>
-      </div>
+      )}
 
-      {/* Product Details */}
-      <div className="p-4 pt-6">
-        <h2 className="menu-text-color  text-lg font-semibold mb-3 quicksand-regular">
+      <div className="flex justify-center items-center h-[120px] md:h-[160px] lg:h-[200px]">
+        <img
+          src={thumbnail}
+          alt={title}
+          className="h-full object-contain rounded-lg"
+        />
+      </div>
+    </div>
+
+    <div className="lg:p-4 p-2 lg:pt-6 pt-3 flex-grow flex flex-col justify-between">
+      <div>
+        <h2 className="menu-text-color lg:text-lg font-semibold text-[13px] mb-1 lg:mb-3 quicksand-regular">
           {title}
         </h2>
 
-        {/* Rating */}
-
-        <div className="flex items-center mb-2">
-          <div className="flex text-yellow-500 text-base mr-2">
+        <div className="flex items-center lg:mb-2 mb-1">
+          <div className="flex text-yellow-500 text-base mr-2 text-[10px] lg:text-base ">
             {Array(fullStars)
               .fill(0)
               .map((_, i) => (
                 <span key={`full-${i}`}>&#9733;</span>
               ))}
-            {halfStar === 1 && <span>&#189;</span>} {/* half star */}
+            {halfStar === 1 && <span>&#189;</span>}
             {Array(emptyStars)
               .fill(0)
               .map((_, i) => (
@@ -142,16 +140,15 @@ export default function Home_Random_Cards({ product }) {
                 </span>
               ))}
           </div>
-          <span className="secondary-text-color text-sm ">
+          <span className="secondary-text-color lg:text-sm text-[10px]">
             {rating.toFixed(1)}
           </span>
         </div>
 
-        {/* Brand */}
-        <div className="flex justify-between items-center ">
+        <div className="flex justify-between items-center">
           <div>
             {brand && (
-              <p className="secondary-text-color font-bold text-base  quicksand-regular ">
+              <p className="secondary-text-color font-bold lg:text-base text-[10px] quicksand-regular">
                 By{" "}
                 <span className="primary-text-color font-bold quicksand-regular ">
                   {brand}
@@ -159,16 +156,16 @@ export default function Home_Random_Cards({ product }) {
               </p>
             )}
           </div>
-          <div>
+          <div className="hidden md:block">
             {stock ? (
-              <p className="secondary-text-color font-bold text-base  quicksand-regular ">
+              <p className="secondary-text-color font-bold quicksand-regular lg:text-base text-[10px]">
                 In-Stock{" "}
-                <span className="text-red-500 font-bold quicksand-regular ">
+                <span className="primary-text-color font-bold quicksand-regular ">
                   {stock}
                 </span>
               </p>
             ) : (
-              <p className="text-red-500 font-bold text-base  quicksand-regular ">
+              <p className="text-red-500 font-bold text-base quicksand-regular lg:text-base text-[10px]">
                 Out Of Stock
               </p>
             )}
@@ -176,46 +173,49 @@ export default function Home_Random_Cards({ product }) {
         </div>
 
         <div className="flex items-center justify-between">
-          <div className="flex items-baseline py-2">
-            <span className="text-lg font-bold text-red-500 mr-2">
+          <div className="flex items-baseline">
+            <span className="lg:text-lg text-[12px] font-bold text-red-500 lg:mr-2 mr-1">
               ${price.toFixed(2)}
             </span>
             {discountPercentage > 0 && (
-              <span className="text-sm text-gray-400 line-through">
+              <span className="lg:text-sm text-[10px] text-gray-400 line-through">
                 ${(price / (1 - discountPercentage / 100)).toFixed(2)}
               </span>
             )}
           </div>
           <div>
-            <p className="secondary-text-color text-sm capitalize lato-regular ">
+            <p className="secondary-text-color lg:text-sm text-[9px] mb-1 capitalize lato-regular hidden md:block ">
               {category}
             </p>
           </div>
         </div>
-
-
       </div>
-      </Link>
-        {/* Price & Add Button */}
-        <div onClick={() => addToCart(product)} className="flex  w-full items-center px-3 pb-3 border-t border-gray-100">
-          <button className="flex items-center justify-center px-4  py-2 primary-bg-color  text-white font-semibold rounded-lg hover:bg-green-200 transition duration-150 quicksand-regular w-full">
-            <svg
-              className="w-5 h-5 mr-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-              ></path>
-            </svg>
-            Add
-          </button>
-        </div>
     </div>
+  </Link>
+
+  <div
+    onClick={() => addToCart(product)}
+    className="w-full items-center px-3 pb-3 border-t border-gray-100 mt-auto"
+  >
+    <button className="flex items-center justify-center lg:px-4 lg:py-2 px-2 py-1 lg:text-base text-[13px] primary-bg-color text-white font-semibold rounded-lg hover:bg-green-200 transition duration-150 quicksand-regular w-full">
+      <svg
+        className="lg:w-5 lg:h-5 w-3 h-3 mr-1"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0z"
+        ></path>
+      </svg>
+      Add
+    </button>
+  </div>
+</div>
+
   );
 }

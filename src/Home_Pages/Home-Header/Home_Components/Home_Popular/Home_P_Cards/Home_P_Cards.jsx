@@ -6,8 +6,9 @@ export default function Home_Popular_main() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
+  const [visibleCategories, setVisibleCategories] = useState([]);
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
 
-  // Get selectedCategory from URL query param, default 'all'
   const selectedCategory = searchParams.get("category") || "all";
 
   // Load categories
@@ -31,55 +32,73 @@ export default function Home_Popular_main() {
       .catch(console.error);
   }, [selectedCategory]);
 
-  // Handle category button click
+  // Responsive logic for categories + title
+  useEffect(() => {
+    const handleResize = () => {
+      const large = window.innerWidth >= 1024;
+      setIsLargeScreen(large);
+
+      if (large) {
+        // lg screen ➜ show all categories
+        setVisibleCategories(categories);
+      } else {
+        // sm / md ➜ show only top 5 (fake "popular")
+        const topFive = categories.slice(0, 8);
+        setVisibleCategories(topFive);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [categories]);
+
   const handleCategoryChange = (catSlug) => {
-    if (catSlug === "all") {
-      setSearchParams({});
-    } else {
-      setSearchParams({ category: catSlug });
-    }
+    if (catSlug === "all") setSearchParams({});
+    else setSearchParams({ category: catSlug });
   };
 
   return (
     <section className="py-8">
       {/* Heading */}
-      <div className="pb-4">
-        <p className="menu-text-color text-3xl font-bold quicksand-regular">
-          Shop By Categories ({categories.length})
+      <div className="lg:pb-4 pb-2">
+        <p className="menu-text-color lg:text-3xl text-xl font-bold quicksand-regular">
+          {isLargeScreen
+            ? `Shop By Categories (${categories.length})`
+            : "Popular Products"}
         </p>
       </div>
 
       {/* Category Buttons */}
-      <div className="flex flex-wrap gap-3 mb-6 quicksand-regular font-semibold">
-  <button
-    onClick={() => handleCategoryChange("all")}
-    className={`px-4 py-2 rounded-md ${
-      selectedCategory === "all"
-        ? "bg-blue-600 text-white"
-        : "bg-white menu-text-color"
-    }`}
-  >
-    All
-  </button>
+      <div className="flex flex-wrap lg:gap-3 mb-6 quicksand-regular font-semibold">
+        <button
+          onClick={() => handleCategoryChange("all")}
+          className={`lg:px-4 px-2 lg:py-2 py-1 lg:text-base text-[13px]              rounded-md ${
+            selectedCategory === "all"
+              ? "bg-blue-600 text-white"
+              : "bg-white menu-text-color"
+          }`}
+        >
+          All
+        </button>
 
-  {categories.map((cat, i) => (
-    <button
-      key={i}
-      onClick={() => handleCategoryChange(cat.slug)}
-      className={`p-1 rounded-md capitalize ${
-        selectedCategory === cat.slug
-          ? "primary-text-color text-white"
-          : "bg-white menu-text-color"
-      }`}
-    >
-      {cat.name}
-    </button>
-  ))}
-</div>
-
+        {visibleCategories.map((cat, i) => (
+          <button
+            key={i}
+            onClick={() => handleCategoryChange(cat.slug || cat)}
+            className={`p-1 rounded-md capitalize  lg:text-base text-[12px]     ${
+              selectedCategory === (cat.slug || cat)
+                ? "primary-text-color text-white"
+                : "bg-white menu-text-color"
+            }`}
+          >
+            {cat.name || cat}
+          </button>
+        ))}
+      </div>
 
       {/* Products */}
-      <div className="grid lg:grid-cols-4 gap-5 md:grid-cols-2 grid-cols-1">
+      <div className="grid lg:grid-cols-4 md:gap-5 gap-2 md:grid-cols-3 grid-cols-2">
         {(selectedCategory === "all" ? products.slice(0, 8) : products).map(
           (product) => (
             <ProductCard key={product.id} product={product} />

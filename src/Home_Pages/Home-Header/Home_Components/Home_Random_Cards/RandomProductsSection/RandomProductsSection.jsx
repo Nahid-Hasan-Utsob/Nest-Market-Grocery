@@ -46,13 +46,13 @@ export default function RandomProductsSection({ products }) {
 
   return (
     <section>
-      <div className="py-4">
-        <p className="menu-text-color text-3xl font-bold quicksand-regular">
+      <div className="lg:py-4">
+        <p className="menu-text-color lg:text-3xl text-xl font-bold quicksand-regular">
           Today Best Selling Products
         </p>
       </div>
       <div className="flex justify-around items-center gap-7 h-full">
-        <div className="h-[400px] mr-2">
+        <div className="h-[400px] mr-2 hidden lg:block">
           {banners.map((item, index) => (
             <div
               key={index}
@@ -78,7 +78,7 @@ export default function RandomProductsSection({ products }) {
             </div>
           ))}
         </div>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 items-center justify-center">
+        <div className="grid  grid-cols-3 gap-2 lg:gap-5 items-center lg:justify-center justify-between w-full">
           {dailyProducts.map((product) => (
             <Home_Random_Cards key={product.id} product={product} />
           ))}

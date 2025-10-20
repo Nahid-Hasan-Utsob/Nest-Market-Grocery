@@ -10,6 +10,7 @@ import Shops from "../Pages/Shops/Shops";
 import Blogs from "../Pages/Blogs/Blogs";
 import Main_Layout from "../Layout/Main_Layout";
 import Cart from "../Pages/Cart/Cart";
+import Product_Details from "../Pages/Product_Details.jsx/Product_Details";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,17 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart></Cart>,
+      },
+      {
+        path: "/product/:id",
+        loader: async ({ params }) => {
+          const res = await fetch(
+            `https://dummyjson.com/products/${params.id}`
+          );
+          const data = await res.json();
+          return data;
+        },
+        element: <Product_Details></Product_Details>,
       },
     ],
   },

@@ -27,9 +27,9 @@ export default function Random_tending_cards({ product }) {
 
   return (
     <Link to={`/product/${product.id}`} scroll={`false`}>
-      <div className="flex items-start bg-white rounded-xl shadow-md overflow-hidden w-full max-w-3xl px-4 my-3">
+      <div className="flex items-start bg-white rounded-xl shadow-md overflow-hidden w-full  lg:px-4 lg:my-3">
         {/* Image Section */}
-        <div className="relative w-25 m-1 h-25 flex-shrink-0">
+        <div className="relative lg:w-25 m-1 lg:h-25 w-16 flex-shrink-0">
           {discountPercentage > 0 && (
             <div
               className={`absolute top-0 left-0 text-white text-xs font-bold px-3 py-1 rounded-br-lg rounded-tl-xl z-10 ${discountColor}`}
@@ -40,7 +40,7 @@ export default function Random_tending_cards({ product }) {
           <img
             src={thumbnail}
             alt={title}
-            className="w-full h-full object-contain p-2"
+            className="w-full h-full object-contain lg:p-2 pt-5"
           />
         </div>
 
@@ -74,7 +74,7 @@ export default function Random_tending_cards({ product }) {
           </div>
 
               {/* Brand */}
-          <div className="flex justify-between items-center">
+          <div className="md:flex justify-between items-center hidden">
             <div>
               {brand && (
                 <p className="secondary-text-color font-bold lg:text-base text-[10px]  quicksand-regular ">

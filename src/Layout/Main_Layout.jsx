@@ -3,6 +3,7 @@ import Category_Nav from "../Components/Categories_Nav";
 import Search_Cart_Nav from "../Components/Search_Cart_Nav";
 import Footer_Banner from "../Components/Footer_Banner";
 import Footer_Bottom from "../Components/Footer_Bottom";
+import Footer_Best_card from "../Components/Footer_Best_card";
 
 
 export default function Main_Layout() {
@@ -30,6 +31,7 @@ export default function Main_Layout() {
 </div>
     <div>
        <Footer_Banner></Footer_Banner>
+       <Footer_Best_card></Footer_Best_card>
      <Footer_Bottom></Footer_Bottom>
     </div>
     </div>

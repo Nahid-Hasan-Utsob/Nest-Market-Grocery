@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { CartContext } from "../../../../../Context/CartContext";
+
 import { Link } from "react-router-dom";
 
 export default function Random_tending_cards({ product }) {
@@ -13,7 +12,6 @@ export default function Random_tending_cards({ product }) {
     rating,
     stock,
   } = product;
-  const { addToCart } = useContext(CartContext);
   const roundedRating = Math.round(rating * 2) / 2;
   const fullStars = Math.floor(roundedRating);
   const halfStar = roundedRating % 1 === 0.5 ? 1 : 0;
@@ -28,7 +26,7 @@ export default function Random_tending_cards({ product }) {
   else if (discountPercentage >= 20) discountColor = "bg-green-500";
 
   return (
-    <Link to={`/product/${product.id}`} scroll={"false"}>
+    <Link to={`/product/${product.id}`} scroll={`false`}>
       <div className="flex items-start bg-white rounded-xl shadow-md overflow-hidden w-full max-w-3xl px-4 my-3">
         {/* Image Section */}
         <div className="relative w-25 m-1 h-25 flex-shrink-0">

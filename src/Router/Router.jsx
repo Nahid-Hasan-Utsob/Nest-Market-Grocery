@@ -26,6 +26,18 @@ const router = createBrowserRouter([
         },
         element: <Home></Home>,
       },
+      
+      {
+        path: "/product/:id",
+        loader: async ({ params }) => {
+          const res = await fetch(
+            `https://dummyjson.com/products/${params.id}`
+          );
+          const data = await res.json();
+          return data;
+        },
+        element: <Product_Details></Product_Details>,
+      },
       {
         path: "/about_us",
         element: <About_us></About_us>,
@@ -59,17 +71,6 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart></Cart>,
-      },
-      {
-        path: "/product/:id",
-        loader: async ({ params }) => {
-          const res = await fetch(
-            `https://dummyjson.com/products/${params.id}`
-          );
-          const data = await res.json();
-          return data;
-        },
-        element: <Product_Details></Product_Details>,
       },
     ],
   },

@@ -93,7 +93,8 @@ export default function ProductCard({ product }) {
   
 
   return (
-    <div className="max-w-xs mx-auto rounded-xl shadow-xl overflow-hidden bg-white ">
+         <div>
+    <div className=" rounded-xl shadow-xl overflow-hidden bg-white ">
       {/* Product Image and Discount */}
       <div className="relative p-6 pb-0">
         {discountPercentage > 0 && (
@@ -160,6 +161,8 @@ export default function ProductCard({ product }) {
       </div>
       </div>
 
+
+         </div>
         {/* Price & Add Button */}
         <div className="flex justify-between items-center pt-3 border-t border-gray-100">
           <div className="flex items-baseline">
@@ -193,5 +196,6 @@ export default function ProductCard({ product }) {
         </div>
       </div>
     </div>
+    
   );
 }

@@ -38,8 +38,10 @@ export default function Home() {
         <Autoplay_Carousel></Autoplay_Carousel>
     <div className="">
 
-          <Home_Featured categories={categories} ></Home_Featured>
+         <div className="hidden md:block">
+           <Home_Featured categories={categories} ></Home_Featured>
           <Category_Product_Cards></Category_Product_Cards>
+         </div>
           <Home_Banner></Home_Banner>
           <Home_Popular_main></Home_Popular_main>
           <Random_Main_Page></Random_Main_Page>

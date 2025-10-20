@@ -46,7 +46,7 @@ export default function Carousel() {
   ];
 
   return (
-    <div className="relative mx-auto py-8">
+    <div className="relative mx-auto md:py-8 py-4">
       {/* Navigation buttons */}
       <button
         ref={prevRef}

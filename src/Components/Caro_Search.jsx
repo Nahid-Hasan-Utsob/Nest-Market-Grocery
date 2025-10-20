@@ -8,7 +8,7 @@ export default function Caro_Search() {
           <input
             type="text"
             placeholder="Search for products..."
-            className="flex-grow md:px-10 px-2 text-black focus:outline-none text-[14px] md:placeholder:text-[14px] placeholder:text-[10px] placeholder:italic lato-regular w-full "
+            className="flex-grow md:px-10 px-2 text-black focus:outline-none text-[14px] md:placeholder:text-[14px] placeholder:text-[13px] placeholder:italic lato-regular w-full "
             style={{ border: "none" }}
           />
           <button className="primary-bg-color text-white font-semibold quicksand-regular md:text-[14px] text-xs md:py-3 md:px-5 py-2 px-3 focus:outline-none rounded-4xl flex items-center">

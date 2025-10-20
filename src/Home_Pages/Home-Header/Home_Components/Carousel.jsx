@@ -50,13 +50,13 @@ export default function Carousel() {
       {/* Navigation buttons */}
       <button
         ref={prevRef}
-        className="absolute left-3 top-1/2 z-10 -translate-y-1/2 bg-black/40 p-3 rounded-full text-white hover:bg-black/70"
+        className="absolute left-3 top-1/2 z-10 -translate-y-1/2 bg-black/40 md:p-3 text-xs p-2 rounded-full text-white hover:bg-black/70"
       >
         <FaArrowLeft className="" />
       </button>
       <button
         ref={nextRef}
-        className="absolute right-3 top-1/2 z-10 -translate-y-1/2 bg-black/40 p-3 rounded-full text-white hover:bg-black/70"
+        className="absolute right-3 top-1/2 z-10 -translate-y-1/2 bg-black/40 md:p-3 rounded-full text-white hover:bg-black/70  text-xs p-2"
       >
         <FaArrowRight />
       </button>
@@ -87,20 +87,20 @@ export default function Carousel() {
               <img
                 src={slide.img}
                 alt={`Slide ${i + 1}`}
-                className="w-full h-[500px] object-cover rounded-2xl"
+                className="w-full h-[250px] md:h-[500px] object-cover rounded-2xl"
               />
               {/* overlay text + button */}
               <div className="absolute inset-0 bg-black/40  rounded-2xl  text-white">
-                <div className="flex flex-col justify-center items-start h-full left-1/12 gap-10 absolute">
+                <div className="flex flex-col justify-center items-start h-full left-1/12 md:gap-10 gap-3 absolute">
                   <div>
-                    <h2 className="text-7xl font-semibold mb-4 text-white quicksand-regular w-3/5">
+                    <h2 className="md:text-7xl text-3xl font-semibold md:mb-4 text-white quicksand-regular w-3/5">
                       {slide.title}
                     </h2>
                     <div>
-                      <h1 className="text-gray-300 mt-8">{slide.subtitle}</h1>
+                      <h1 className="text-gray-300 md:mt-8 md:text-base text-xs md:pt-0 pt-2 ">{slide.subtitle}</h1>
                     </div>
                   </div>
-                  <div className="w-1/2">
+                  <div className="md:w-1/2">
                     <Caro_Search></Caro_Search>
                   </div>
                 </div>

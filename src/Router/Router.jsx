@@ -10,20 +10,24 @@ import Shops from "../Pages/Shops/Shops";
 import Blogs from "../Pages/Blogs/Blogs";
 import Main_Layout from "../Layout/Main_Layout";
 import Cart from "../Pages/Cart/Cart";
-import Product_Details from "../Pages/Product_Details.jsx/Product_Details";
+import Product_Details from "../Pages/Product_Details.jsx/Product_Card/Product_Details";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main_Layout></Main_Layout>,
+    handle: { scroll: false } ,
     children: [
       {
         path: "/",
         loader: async () => {
           const res = await fetch("https://dummyjson.com/products");
           const data = await res.json();
+          
           return data;
+          
         },
+        handle: { scroll: false } ,
         element: <Home></Home>,
       },
       
@@ -36,6 +40,7 @@ const router = createBrowserRouter([
           const data = await res.json();
           return data;
         },
+        handle: { scroll: false } ,
         element: <Product_Details></Product_Details>,
       },
       {

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../../../../Context/CartContext";
+import { Link } from "react-router-dom";
 
 export default function ProductCard({ product }) {
   const {
@@ -93,9 +94,11 @@ export default function ProductCard({ product }) {
   
 
   return (
-         <div>
+     
+
     <div className=" rounded-xl shadow-xl overflow-hidden bg-white ">
       {/* Product Image and Discount */}
+       <Link to={`/product/${product.id}`} scroll={false}>
       <div className="relative p-6 pb-0">
         {discountPercentage > 0 && (
           <div
@@ -162,9 +165,13 @@ export default function ProductCard({ product }) {
       </div>
 
 
-         </div>
+        
         {/* Price & Add Button */}
-        <div className="flex justify-between items-center pt-3 border-t border-gray-100">
+       
+      </div>
+</Link>
+
+       <div className="flex justify-between items-center py-3 px-3 border-t border-gray-200">
           <div className="flex items-baseline">
             <span className="text-lg font-bold text-green-600 mr-2">
               ${price.toFixed(2)}
@@ -194,7 +201,6 @@ export default function ProductCard({ product }) {
             Add
           </button>
         </div>
-      </div>
     </div>
     
   );

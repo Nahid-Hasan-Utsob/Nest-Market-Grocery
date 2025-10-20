@@ -30,7 +30,7 @@ export default function Home_Popular_main({ children }) {
         setProducts(data?.products || []);
       })
       .catch((err) => console.error(err))
-      .finally(() => setLoading(false));
+     
   }, [selectedCategory]);
 
   console.log(products);

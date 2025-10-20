@@ -5,7 +5,7 @@ export default function Product_Details() {
   const product = useLoaderData();
 
   return (
-    <div className="max-w-5xl mx-auto p-6">
+    <div className="">
       <div className="flex flex-col md:flex-row gap-6">
         <img
           src={product.thumbnail}

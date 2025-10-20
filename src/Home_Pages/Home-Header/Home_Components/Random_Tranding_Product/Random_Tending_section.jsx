@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Random_tending_cards from "./Random_tending_cards/Random_tending_cards";
+
 
 export default function Random_Tending_section({ products = [], type }) {
   const [filteredProducts, setFilteredProducts] = useState([]);

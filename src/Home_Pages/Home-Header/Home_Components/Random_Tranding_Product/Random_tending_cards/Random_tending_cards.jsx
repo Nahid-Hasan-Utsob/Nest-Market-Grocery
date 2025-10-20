@@ -22,17 +22,17 @@ export default function Random_tending_cards({ product }) {
     discountColor = "bg-blue-500";
   else if (discountPercentage >= 10 && discountPercentage < 15)
     discountColor = "bg-orange-500";
-  else if (discountPercentage >= 18) discountColor = "bg-emerald-500";
+  else if (discountPercentage >= 16) discountColor = "bg-emerald-500";
   else if (discountPercentage >= 20) discountColor = "bg-green-500";
 
   return (
     <Link to={`/product/${product.id}`} scroll={`false`}>
       <div className="flex items-start bg-white rounded-xl shadow-md overflow-hidden w-full  lg:px-4 lg:my-3">
         {/* Image Section */}
-        <div className="relative lg:w-25 m-1 lg:h-25 w-16 flex-shrink-0">
+        <div className="relative lg:w-25 m-1 lg:h-25 w-12 flex-shrink-0">
           {discountPercentage > 0 && (
             <div
-              className={`absolute top-0 left-0 text-white text-xs font-bold px-3 py-1 rounded-br-lg rounded-tl-xl z-10 ${discountColor}`}
+              className={`absolute top-0 left-0 text-white md:text-xs text-[10px] font-bold md:px-3 px-1 py-1 rounded-br-lg rounded-tl-xl z-10 ${discountColor}`}
             >
               {discountPercentage.toFixed(0)}%
             </div>

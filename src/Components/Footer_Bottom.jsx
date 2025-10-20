@@ -33,7 +33,7 @@ export default function Footer_Bottom() {
             Make your Breakfast Healthy and Easy
           </p>
 
-          <ul className="lg:text-[15px] text-[12px] lato-regular flex menu-text-color  flex-col lg:gap-4 gap-2">
+          <ul className="lg:text-[15px] md:text-[12px] text-[10px] lato-regular flex menu-text-color  flex-col lg:gap-4 gap-2">
             <li className="flex items-start lg:gap-2 gap-1 ">
               <MdOutlineLocationOn className="primary-text-color mt-1 text-xl hidden md:block " />
               Rangpur-5450, Bangladesh
@@ -68,7 +68,7 @@ export default function Footer_Bottom() {
           <h3 className="font-semibold lg:text-2xl text-[17px] menu-text-color quicksand-regular mb-4">
             Company
           </h3>
-          <ul className="lg:text-[15px]  text-[12px] lato-regular flex menu-text-color  flex-col lg:gap-4 gap-2">
+          <ul className="lg:text-[15px] md:text-[12px]  text-[10px] lato-regular flex menu-text-color  flex-col lg:gap-4 gap-2">
             <li>About Us</li>
             <li>Delivery Information</li>
             <li>Privacy Policy</li>
@@ -84,7 +84,7 @@ export default function Footer_Bottom() {
           <h3 className="font-semibold lg:text-2xl text-[17px] menu-text-color quicksand-regular mb-4">
             Account
           </h3>
-          <ul className="lg:text-[15px]  text-[12px] lato-regular flex menu-text-color  flex-col lg:gap-4 gap-2 ">
+          <ul className="lg:text-[15px] md:text-[12px]  text-[10px] lato-regular flex menu-text-color  flex-col lg:gap-4 gap-2 ">
             <li>Sign In</li>
             <li>View Cart</li>
             <li>My Wishlist</li>
@@ -100,7 +100,7 @@ export default function Footer_Bottom() {
           <h3 className="font-semibold lg:text-2xl text-[17px] menu-text-color quicksand-regular mb-4">
             Corporate
           </h3>
-          <ul className="lg:text-[15px]  text-[12px] lato-regular flex menu-text-color  flex-col lg:gap-4 gap-2">
+          <ul className="lg:text-[15px] md:text-[12px]  text-[10px] lato-regular flex menu-text-color  flex-col lg:gap-4 gap-2">
             <li>Become a Vendor</li>
             <li>Affiliate Program</li>
             <li>Farm Business</li>
@@ -116,7 +116,7 @@ export default function Footer_Bottom() {
           <h3 className="font-semibold lg:text-2xl text-[17px] menu-text-color quicksand-regular mb-4">
             Popular
           </h3>
-          <ul className="lg:text-[15px]  text-[12px] lato-regular flex menu-text-color  flex-col lg:gap-4 gap-2">
+          <ul className="lg:text-[15px] md:text-[12px]  text-[10px] lato-regular flex menu-text-color  flex-col lg:gap-4 gap-2">
             <li>Milk & Flavoured Milk</li>
             <li>Butter and Margarine</li>
             <li>Eggs Substitutes</li>
@@ -132,7 +132,7 @@ export default function Footer_Bottom() {
           <h3 className="font-semibold lg:text-2xl text-[17px] menu-text-color quicksand-regular mb-4">
             Install App
           </h3>
-          <ul className="lg :text-[15px] text-[12px] lato-regular flex menu-text-color  flex-col lg:">
+          <ul className="lg :text-[15px] md:text-[12px] text-[10px] lato-regular flex menu-text-color  flex-col lg:">
             gap-2 <li>From App Store or Google Play</li>
             <div>
               <img
@@ -151,14 +151,14 @@ export default function Footer_Bottom() {
 
       {/* Bottom Section */}
       <div className="border-t py-6 mt-4 primary-text-color text-sm">
-        <div className="px-6 flex flex-row justify-between items-center gap-4">
+        <div className="md:px-6 flex flex-row justify-between items-center md:gap-4">
           <div>
             <p className="md:font-base text-[10px] lato-regular font-bold secondary-text-color mt-2">
               © 2025, Nest – WordPress Ecommerce Template. <br />
               All rights reserved
             </p>
           </div>
-          <div className="flex flex-col md:flex-row items-center gap-6">
+          <div className="flex flex-col md:flex-row items-center md:gap-6">
             <div className="lg:flex gap-3 items-center hidden ">
               <div>
                 <MdOutlineLocalPhone className="text-4xl menu-text-color"></MdOutlineLocalPhone>
@@ -189,22 +189,24 @@ export default function Footer_Bottom() {
 
           {/* Social Icons */}
           <div>
-            <div className="flex items-center gap-4 quicksand-regular font-bold">
+            <div className="flex items-center md:gap-4 quicksand-regular font-bold">
               <p className="md:text-base text-[10px]">Follow Us </p>
-              <div className="flex gap-3 primary-text-color text-lg">
-                <FaFacebookF className="cursor-pointer hover:text-green-800  text-white primary-bg-color p-1 lg:text-2xl text-[17px] rounded-full" />
-                <FaTwitter className="cursor-pointer hover:text-greelg:n-800 text-  text-[12px]white primary-bg-color p-1 lg:text-2xl text-[lg:17px] gap-2 rounded-full" />
-                <FaWhatsapp className="cursor-pointer hover:text-greelg:n-800 text-  text-[12px]white primary-bg-color p-1 lg:text-2xl text-[lg:17px] gap-2 rounded-full" />
-                <FaInstagram className="cursor-pointer hover:text-greelg:n-800 text-  text-[12px]white primary-bg-color p-1 lg:text-2xl text-[lg:17px] gap-2 rounded-full" />
+              <div className="flex md:gap-3 gap-[2px] primary-text-color text-lg ml-2">
+                <FaFacebookF className="cursor-pointer hover:text-green-800  text-white primary-bg-color md:p-1 p-[2px] md:text-2xl text-[14px] rounded-full" />
+                <FaInstagram className="cursor-pointer hover:text-green-800  text-white primary-bg-color md:p-1 p-[2px] md:text-2xl text-[14px] rounded-full" />
+                <FaWhatsapp className="cursor-pointer hover:text-green-800  text-white primary-bg-color md:p-1 p-[2px] md:text-2xl text-[14px] rounded-full" />
+                <FaTwitter className="cursor-pointer hover:text-green-800  text-white primary-bg-color md:p-1 p-[2px] md:text-2xl text-[14px] rounded-full" />
+             
+             
               </div>
             </div>
-            lg:{" "}
-            <di v>
-              text-[12px]{" "}
-              <p className="md:font-base text-[8px] lato-regulg:lar f gap-2ont-bold secondary-text-color mt-2">
+      
+            <div>
+      
+              <p className="md:font-base text-[8px] lato-regular gap-2 font-bold secondary-text-color mt-2">
                 Up to 15% discount on your first subscribe
               </p>
-            </di>
+            </div>
           </div>
         </div>
       </div>

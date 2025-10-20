@@ -43,7 +43,7 @@ export default function Home_Banner() {
   }, []);
 
   return (
-    <section className="grid md:grid-cols-3 grid-cols-2 gap-5 mt-4">
+    <section className="grid lg:grid-cols-3 grid-cols-2 gap-2 mt-4">
       {visibleBanners.map((item, index) => (
         <div
           key={index}

@@ -11,7 +11,7 @@ export default function Random_Tending_Main() {
   }, []);
 
   return (
-    <div className="flex  lg:justify-around mt-10 lg:gap-6 gap-2">
+    <div className="flex  md:justify-evenly mt-10 lg:gap-6 gap-1">
       {/* Top Selling */}
       <div className="py-5 flex-1 md:min-w-[280px]">
        <div className="lg:py-4">
@@ -25,7 +25,7 @@ export default function Random_Tending_Main() {
       </div>
 
       {/* Top Rated */}
-      <div className="py-5 flex-1 md:min-w-[280px]">
+      <div className="py-5 flex-1 md:min-w-[280px]  hidden md:block">
         <div className="lg:py-4">
         <p className="menu-text-color border-gray-300 border-b-2 w-fit pb-2 lg:text-3xl text-xl font-bold quicksand-regular">
           Top Review
@@ -37,10 +37,10 @@ export default function Random_Tending_Main() {
       </div>
 
       {/* Trending Products — শুধু md থেকে দেখা যাবে */}
-      <div className="py-5 flex-1 md:min-w-[280px] hidden md:block">
+      <div className="py-5 flex-1 md:min-w-[280px]">
        <div className="lg:py-4">
         <p className="menu-text-color border-gray-300 border-b-2 w-fit pb-2 lg:text-3xl text-xl font-bold quicksand-regular">
-          Tending Products
+          Tending
         </p>
       </div>
         <div className="mt-5" >

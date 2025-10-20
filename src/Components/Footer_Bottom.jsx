@@ -14,10 +14,11 @@ import { MdOutgoingMail, MdOutlineLocationOn, MdOutlineMail } from "react-icons/
 import { MdOutlineLocalPhone } from "react-icons/md";
 
 import Logo from "../Home_Pages/Home-Header/Navbar/Logo";
+import visa from "../assets/Icon-Images/img (2).png";
 
 export default function Footer_Bottom() {
   return (
-    <footer className="bg-white text-gray-700 border-t">
+    <footer className="bg-white">
       <div className=" mx-auto px-6 py-10 grid md:grid-cols-6 sm:grid-cols-2 gap-8 ">
         {/* Logo & Info */}
         <div>
@@ -54,7 +55,7 @@ export default function Footer_Bottom() {
 
         {/* Company */}
         <div>
-          <h3 className="font-semibold mb-3 text-lg">Company</h3>
+          <h3 className="font-semibold text-2xl menu-text-color quicksand-regular mb-4">Company</h3>
           <ul className="text-[15px] lato-regular flex menu-text-color  flex-col gap-4">
             <li>About Us</li>
             <li>Delivery Information</li>
@@ -68,7 +69,7 @@ export default function Footer_Bottom() {
 
         {/* Account */}
         <div>
-          <h3 className="font-semibold mb-3 text-lg">Account</h3>
+          <h3 className="font-semibold text-2xl menu-text-color quicksand-regular mb-4">Account</h3>
           <ul className="text-[15px] lato-regular flex menu-text-color  flex-col gap-4 ">
             <li>Sign In</li>
             <li>View Cart</li>
@@ -82,7 +83,7 @@ export default function Footer_Bottom() {
 
         {/* Corporate */}
         <div>
-          <h3 className="font-semibold mb-3 text-lg">Corporate</h3>
+          <h3 className="font-semibold text-2xl menu-text-color quicksand-regular mb-4">Corporate</h3>
           <ul className="text-[15px] lato-regular flex menu-text-color  flex-col gap-4">
             <li>Become a Vendor</li>
             <li>Affiliate Program</li>
@@ -96,7 +97,7 @@ export default function Footer_Bottom() {
 
         {/* Popular */}
         <div>
-          <h3 className="font-semibold mb-3 text-lg">Popular</h3>
+          <h3 className="font-semibold text-2xl menu-text-color quicksand-regular mb-4">Popular</h3>
           <ul className="text-[15px] lato-regular flex menu-text-color  flex-col gap-4">
             <li>Milk & Flavoured Milk</li>
             <li>Butter and Margarine</li>
@@ -107,11 +108,26 @@ export default function Footer_Bottom() {
             <li>Cheese</li>
           </ul>
         </div>
+
+        {/* Popular */}
+        <div>
+          <h3 className="font-semibold text-2xl menu-text-color quicksand-regular mb-4">Install App</h3>
+          <ul className="text-[15px] lato-regular flex menu-text-color  flex-col ">
+            <li>From App Store or Google Play</li>
+            <div>
+                  <img className="w-full mb-4" src="https://www.vhv.rs/dpng/d/410-4108569_get-it-on-google-play-logo-png-vector.png" alt="" />
+            </div>
+            <li>Secured Payment Gateways</li>
+            <div>
+                  <img className="w-full mt-4" src={visa}alt="" />
+            </div>
+          </ul>
+        </div>
       </div>
 
       {/* Bottom Section */}
-      <div className="border-t py-6 mt-4 text-sm">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="border-t py-6 mt-4 primary-text-color text-sm">
+        <div className="px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div>
             <p className="font-base lato-regular font-bold secondary-text-color mt-2">
               © 2025, Nest – WordPress Ecommerce Template. <br />

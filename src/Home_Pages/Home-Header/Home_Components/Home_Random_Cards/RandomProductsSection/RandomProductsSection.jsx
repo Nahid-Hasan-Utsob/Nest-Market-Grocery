@@ -4,6 +4,7 @@ import Card_Button from "../../../../../Components/Card_Button";
 export default function RandomProductsSection({ products }) {
   const [dailyProducts, setDailyProducts] = useState([]);
 
+  
   useEffect(() => {
     if (!products || products.length === 0) return;
 

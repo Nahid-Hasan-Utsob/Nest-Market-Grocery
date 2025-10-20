@@ -9,6 +9,7 @@ import Contuct_Us from "../Pages/Contuct_Us/Contuct_Us";
 import Shops from "../Pages/Shops/Shops";
 import Blogs from "../Pages/Blogs/Blogs";
 import Main_Layout from "../Layout/Main_Layout";
+import Cart from "../Pages/Cart/Cart";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "/Shops",
         element: <Shops></Shops>,
+      },
+      {
+        path: "/cart",
+        element: <Cart></Cart>,
       },
     ],
   },

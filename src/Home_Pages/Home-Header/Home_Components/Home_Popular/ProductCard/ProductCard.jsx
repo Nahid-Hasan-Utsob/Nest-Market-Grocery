@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../../../../../Context/CartContext";
 
 export default function ProductCard({ product }) {
   const {
@@ -12,6 +13,9 @@ export default function ProductCard({ product }) {
     id,
     stock,
   } = product;
+
+
+  const { addToCart } = useContext(CartContext);
 // {{
 //     "id": 1,
 //     "title": "Essence Mascara Lash Princess",
@@ -86,6 +90,7 @@ export default function ProductCard({ product }) {
     discountColor = "bg-orange-500";
   else if (discountPercentage >= 18) discountColor = "bg-emerald-500";
   else if (discountPercentage >= 20) discountColor = "bg-green-500";
+  
 
   return (
     <div className="max-w-xs mx-auto rounded-xl shadow-xl overflow-hidden bg-white ">
@@ -168,7 +173,7 @@ export default function ProductCard({ product }) {
             )}
           </div>
 
-          <button className="flex items-center justify-center px-4  py-2 bg-green-100 text-green-600 font-semibold rounded-lg hover:bg-green-200 transition duration-150 quicksand-regular ">
+          <button onClick={() => addToCart(product)} className="flex items-center justify-center px-4  py-2 bg-green-100 text-green-600 font-semibold rounded-lg hover:bg-green-200 transition duration-150 quicksand-regular ">
             <svg
               className="w-5 h-5 mr-1"
               fill="none"

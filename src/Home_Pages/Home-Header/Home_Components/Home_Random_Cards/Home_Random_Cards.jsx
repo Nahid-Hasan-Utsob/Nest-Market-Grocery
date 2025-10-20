@@ -1,4 +1,5 @@
-import React from "react";
+import { useContext } from "react";
+import { CartContext } from "../../../../Context/CartContext";
 
 export default function Home_Random_Cards({ product }) {
   const {
@@ -12,6 +13,9 @@ export default function Home_Random_Cards({ product }) {
     id,
     stock,
   } = product;
+
+
+  const { addToCart } = useContext(CartContext);
   // {{
   //     "id": 1,
   //     "title": "Essence Mascara Lash Princess",
@@ -182,7 +186,7 @@ export default function Home_Random_Cards({ product }) {
           </div>
         </div>
         {/* Price & Add Button */}
-        <div className="flex  w-full items-center pt-3 border-t border-gray-100">
+        <div onClick={() => addToCart(product)} className="flex  w-full items-center pt-3 border-t border-gray-100">
           <button className="flex items-center justify-center px-4  py-2 primary-bg-color  text-white font-semibold rounded-lg hover:bg-green-200 transition duration-150 quicksand-regular w-full">
             <svg
               className="w-5 h-5 mr-1"

@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Category_Nav from "../Components/Categories_Nav";
 import Search_Cart_Nav from "../Components/Search_Cart_Nav";
 import Footer_Banner from "../Components/Footer_Banner";
+import Footer_Bottom from "../Components/Footer_Bottom";
 
 export default function Main_Layout() {
   //hide component from pages
@@ -21,6 +22,7 @@ export default function Main_Layout() {
 
       <Outlet></Outlet>
      <Footer_Banner></Footer_Banner>
+     <Footer_Bottom></Footer_Bottom>
     </div>
   );
 }

@@ -17,7 +17,7 @@ export default function NavBar() {
   return (
     <section>
       <div className="flex items-center gap-5">
-        <div className="flex items-center gap-3 primary-text-color quicksand-regular font-bold text-[14px]">
+        <div className="md:flex hidden items-center gap-3 primary-text-color quicksand-regular font-bold text-[14px]">
           <p>Became Vendor </p>
           <span>
             <FaArrowRightLong />
@@ -31,7 +31,7 @@ export default function NavBar() {
               1
             </span>
           </div>
-          <p>Wishlist</p>
+          <p className="hidden md:block">Wishlist</p>
         </div>
        <Link to={'/cart'}>
         <div className="flex items-center gap-3 secondary-text-color ato-regular   text-base]">
@@ -42,9 +42,9 @@ export default function NavBar() {
               {cart.length}
             </span>
           </div>
-          <p>Cart</p>
+          <p className="hidden md:block">Cart</p>
         </div></Link>
-        <div className="flex items-center gap-3 secondary-text-color ato-regular   text-base]">
+        <div className="md:flex items-center gap-3 secondary-text-color ato-regular   text-base] hidden">
           <VscAccount className="w-7 h-7  text-black" />
           <p>Accounts</p>
         </div>

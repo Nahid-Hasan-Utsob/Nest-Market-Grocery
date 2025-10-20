@@ -35,7 +35,7 @@ export default function Footer_Best_card() {
   ];
 
   return (
-    <section className="grid grid-cols-5 justify-c\ items-center ">
+    <section className="grid grid-cols-5 justify-around items-center my-5">
       {bestCard.map((card, index) => (
         <div key={index} className="flex  gap-5 items-center justify-start bg-white p-4 rounded-lg shadow">
           <div>

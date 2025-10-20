@@ -73,7 +73,7 @@ export default function Home_header() {
                 />{" "}
               </svg>
             </div>
-            <ul className="flex gap-3 items-center">{header_links}</ul>
+            <ul className="lg:flex gap-3 items-center hidden">{header_links}</ul>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -81,7 +81,7 @@ export default function Home_header() {
             100% Secure delivery without contacting the courier
           </p>
         </div>
-        <div className="navbar-end">{call_us}</div>
+        <div className="navbar-end hidden lg:block">{call_us}</div>
       </div>
     </section>
   );

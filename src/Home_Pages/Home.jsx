@@ -24,11 +24,17 @@ export default function Home() {
       <Home_header></Home_header>
       <div className="flex items-center justify-between mt-8">
         <Logo></Logo>
-        <Sesrch_Fileds></Sesrch_Fileds>
-        <NavBar></NavBar>
+       <div className="hidden md:block">
+         <Sesrch_Fileds></Sesrch_Fileds>
+       </div>
+        <div>
+          <NavBar></NavBar>
+        </div>
       </div>
       <div className="mt-8">
-        <Categories_Nav></Categories_Nav>
+       <div  className="hidden md:block">
+         <Categories_Nav></Categories_Nav>
+       </div>
         <Autoplay_Carousel></Autoplay_Carousel>
     <div className="">
 

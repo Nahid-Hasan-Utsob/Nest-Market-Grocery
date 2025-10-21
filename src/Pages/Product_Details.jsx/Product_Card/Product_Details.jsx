@@ -8,14 +8,8 @@ export default function Product_Details() {
 
   return (
     <div >
-            <div className="flex my-3 justify-between">
-          <div>
+            
                 <Product_RIght_section product={product}></Product_RIght_section>
-          </div>
-            </div>
-              {/* <div>
-                <Project_Des_Viewer_Main></Project_Des_Viewer_Main>
-              </div> */}
-    </div>
-  );
+</div>
+  )
 }

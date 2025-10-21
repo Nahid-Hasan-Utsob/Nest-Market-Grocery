@@ -2,6 +2,7 @@
 import React, { useContext, useState } from "react";
 import { RiStarFill } from "react-icons/ri";
 import { CartContext } from "../../../Context/CartContext";
+import { MdDeliveryDining } from "react-icons/md";
 
 export default function Product_RIght_section({ product }) {
   const {
@@ -40,7 +41,7 @@ export default function Product_RIght_section({ product }) {
   const reviewsSafe = Array.isArray(reviews) ? reviews : [];
 
   return (
-    <section className="w-full">
+    <section className="w-full my-4 lg:my-10">
       <div className="grid md:grid-cols-2  ">
         <div>
           <div className="w-full p-3 flex justify-center items-center">
@@ -73,12 +74,12 @@ export default function Product_RIght_section({ product }) {
             </div>
 
             <div className="flex items-baseline md:m-0 mt-3">
-              <span className="lg:text-6xl text-[18px] font-bold text-green-600 lg:mr-2 mr-1">
+              <span className="lg:text-4xl text-[18px] font-bold text-green-600 lg:mr-2 mr-1">
                 ${Number(price || 0).toFixed(2)}
               </span>
               <div>
                 {discountPercentage > 0 && (
-                  <span className="lg:text-2xl text-[10px] text-gray-400 line-through">
+                  <span className="lg:text-xl text-[10px] text-gray-400 line-through">
                     $
                     {(
                       Number(price || 0) /
@@ -103,29 +104,6 @@ export default function Product_RIght_section({ product }) {
             <p className="px-2 text-white md:text-base text-xs rounded-xs primary-bg-color">
               {weight} G
             </p>
-          </div>
-
-          <div
-            onClick={() => addToCart && addToCart(product)}
-            className="lg:w-fit w-full min-w-76 items-center pb-3 border-t border-gray-100 mt-5"
-          >
-            <button className="flex items-center justify-center lg:px-4 lg:py-3 px-2 py-2 lg:text-base text-[13px] primary-bg-color text-white font-semibold rounded-lg hover:bg-green-200 transition duration-150 quicksand-regular w-full">
-              <svg
-                className="lg:w-5 lg:h-5 w-3 h-3 mr-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0z"
-                />
-              </svg>
-              Add to cart
-            </button>
           </div>
 
           {/* ===== Info grid (brand, stock, etc) ===== */}
@@ -224,6 +202,40 @@ export default function Product_RIght_section({ product }) {
               </div>
             </div>
           </div>
+
+          <div className="flex gap-2">
+            <div
+              onClick={() => addToCart && addToCart(product)}
+              className="lg:w-fit w-full lg:min-w-76 items-center pb-3 border-t border-gray-100 mt-5"
+            >
+              <button className="flex items-center justify-center lg:px-4 lg:py-3 px-2 py-2 lg:text-base text-[13px] primary-bg-color text-white font-semibold rounded-lg hover:bg-green-200 transition duration-150 quicksand-regular w-full">
+                <svg
+                  className="lg:w-5 lg:h-5 w-3 h-3 mr-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0z"
+                  />
+                </svg>
+                Add to cart
+              </button>
+            </div>
+            <div
+              // onClick={() => addToCart && addToCart(product)}
+              className="lg:w-fit w-full lg:min-w-76 items-center pb-3 border-t border-gray-100 mt-5"
+            >
+              <button className="flex items-center justify-center lg:px-4 lg:py-3 px-2 py-2 lg:text-base text-[13px] bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition duration-150 quicksand-regular w-full">
+                <MdDeliveryDining className="lg:w-7 lg:h-7 w-4 h-4 mr-1"></MdDeliveryDining>
+                Buy Now
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       {/* ===== Tabs area ===== */}
@@ -276,7 +288,9 @@ export default function Product_RIght_section({ product }) {
 
           {activeTab === "reviews" && (
             <div>
-              <h3 className="md:text-lg text-base font-bold md:mb-3 mb-2">Customer Reviews</h3>
+              <h3 className="md:text-lg text-base font-bold md:mb-3 mb-2">
+                Customer Reviews
+              </h3>
 
               {reviewsSafe.length === 0 ? (
                 <p className="italic text-gray-500">No reviews yet.</p>

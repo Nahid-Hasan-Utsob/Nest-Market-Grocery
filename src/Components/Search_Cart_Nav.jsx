@@ -9,7 +9,7 @@ export default function Search_Cart_Nav() {
         <Logo></Logo>
         <div className="min-w-1/2">
           <div className="w-full">
-            <div className="flex  border-2 border-green-300 rounded-lg overflow-hidden shadow-sm max-w-xl mx-auto p-[2px] h-12 w-full">
+            <div className="lg:flex  border-2 border-green-300 rounded-lg overflow-hidden shadow-sm max-w-xl mx-auto p-[2px] h-12 hidden w-full">
               <div className="main-category-class  w-[250px]">
                 <li className="flex items-center  menu-text-color text-[13px]  ">
                   <select defaultValue="" className="select select-ghost ">

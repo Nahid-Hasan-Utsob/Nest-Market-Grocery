@@ -21,7 +21,9 @@ export default function Main_Layout() {
  
     <div className="lato-regular max-w-[1550px] mx-auto lg:px-0 px-1">
 
-     {!hideNav && <Category_Nav></Category_Nav>}
+   <div className="hidden lg:block">
+      {!hideNav && <Category_Nav></Category_Nav>}
+   </div>
      {!hideNav &&  <Search_Cart_Nav></Search_Cart_Nav>}
 
 <div>

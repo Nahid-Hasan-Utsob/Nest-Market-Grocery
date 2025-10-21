@@ -231,7 +231,7 @@ export default function Product_RIght_section({ product }) {
               className="lg:w-fit w-full lg:min-w-76 items-center pb-3 border-t border-gray-100 mt-5"
             >
               <button className="flex items-center justify-center lg:px-4 lg:py-3 px-2 py-2 lg:text-base text-[13px] bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition duration-150 quicksand-regular w-full">
-                <MdDeliveryDining className="lg:w-7 lg:h-7 w-4 h-4 mr-1"></MdDeliveryDining>
+                <MdDeliveryDining className="lg:w-6 lg:h-6 w-4 h-4 mr-1"></MdDeliveryDining>
                 Buy Now
               </button>
             </div>

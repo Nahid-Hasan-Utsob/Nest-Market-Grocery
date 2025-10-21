@@ -16,11 +16,11 @@ export default function ScrollToTop() {
   useEffect(() => {
     if (navigationType === "PUSH") {
       // নতুন page এ top
-      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, left: 0 });
     } else if (navigationType === "POP") {
       // back/forward → আগের scroll position restore
       const prevY = positions.current[pathname] || 0;
-      window.scrollTo({ top: prevY, left: 0, behavior: "smooth" });
+      window.scrollTo({ top: prevY, left: 0 });
     }
   }, [pathname, navigationType]);
 

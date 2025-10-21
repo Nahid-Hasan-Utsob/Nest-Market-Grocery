@@ -4,6 +4,7 @@ import Search_Cart_Nav from "../Components/Search_Cart_Nav";
 import Footer_Banner from "../Components/Footer_Banner";
 import Footer_Bottom from "../Components/Footer_Bottom";
 import Footer_Best_card from "../Components/Footer_Best_card";
+import ScrollToTop from "./ScrollToTop";
 
 
 export default function Main_Layout() {
@@ -28,7 +29,7 @@ export default function Main_Layout() {
 
 <div>
 
-         
+         <ScrollToTop></ScrollToTop>
         <Outlet></Outlet>
 </div>
     <div>

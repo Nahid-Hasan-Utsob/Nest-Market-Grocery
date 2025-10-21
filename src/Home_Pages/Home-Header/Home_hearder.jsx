@@ -81,7 +81,7 @@ export default function Home_header() {
             100% Secure delivery without contacting the courier
           </p>
         </div>
-        <div className="navbar-end hidden lg:block">{call_us}</div>
+        <div className="navbar-end  hidden lg:flex">{call_us}</div>
       </div>
     </section>
   );

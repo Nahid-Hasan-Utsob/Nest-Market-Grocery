@@ -83,6 +83,10 @@ export default function RandomProductsSection({ products }) {
             <Home_Random_Cards key={product.id} product={product} />
           ))}
         </div>
+
+          
+
+
       </div>
     </section>
   );

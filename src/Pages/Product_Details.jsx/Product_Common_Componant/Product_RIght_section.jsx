@@ -95,8 +95,10 @@ export default function Product_RIght_section({ product }) {
         </div>
       
         <div>
-            <div>
-                  <p className="menu-text-color ">Brand: <span className="primary-text-color">{brand}</span></p>
+            <div className="flex flex-col text-start">
+                  <p className="menu-text-color quicksand-regular font-bold   ">Brand: <span className="primary-text-color text-base font-bold quicksand-regular pl-4">{brand}</span></p>
+                  <p className="menu-text-color quicksand-regular font-bold   ">Stock: <span className="text-red-500 text-base font-bold quicksand-regular pl-4">{stock} Items</span></p>
+                  <p className="menu-text-color quicksand-regular font-bold   ">Tags: <span className="primary-text-color text-base font-bold quicksand-regular pl-4">{tags}</span></p>
             </div>
             <div></div>
         </div>

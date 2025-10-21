@@ -281,7 +281,7 @@ export default function Product_RIght_section({ product }) {
               {reviewsSafe.length === 0 ? (
                 <p className="italic text-gray-500">No reviews yet.</p>
               ) : (
-                <ul className="grid grid-cols-4">
+                <ul className="grid grid-cols-4 gap-2">
                   {reviewsSafe.map((r, i) => {
                     const reviewerName =
                       r?.reviewerName || r?.name || `NotFound`;

@@ -8,7 +8,7 @@ export default function Product_Details() {
 
   return (
     <div className="flex my-3">
-              <Product_Common_Componant></Product_Common_Componant>
+              <Product_Common_Componant product={product}></Product_Common_Componant>
               <Product_RIght_section product={product}></Product_RIght_section>
     </div>
   );

@@ -19,7 +19,7 @@ export default function Product_RIght_section({ product }) {
     height,
     width,
     sku,
-    brand,
+    brand,reviews,
     tags,
     stock,
     discountPercentage,
@@ -37,11 +37,11 @@ export default function Product_RIght_section({ product }) {
         </div>
         <div>
           <p className="quicksand-regular text-[40px] w-3/4 font-bold menu-text-color  ">
-            Seeds of Change Organic Quinoa, Brown
+            {title}
           </p>
           <div className="flex items-center my-3">
             <RiStarFill className="text-orange-500 text-xl mr-5"></RiStarFill>
-            <p className="font-[14px] secondary-text-color ">(32 reviews)</p>
+            <p className="font-[14px] secondary-text-color ">({reviews.length} reviews)</p>
           </div>
 
           <div className="flex items-baseline">
@@ -93,12 +93,74 @@ export default function Product_RIght_section({ product }) {
             Add to cart
           </button>
         </div>
-      
-        <div>
-            <div className="flex flex-col text-start">
-                  <p className="menu-text-color quicksand-regular font-bold   ">Brand: <span className="primary-text-color text-base font-bold quicksand-regular pl-4">{brand}</span></p>
-                  <p className="menu-text-color quicksand-regular font-bold   ">Stock: <span className="text-red-500 text-base font-bold quicksand-regular pl-4">{stock} Items</span></p>
-                  <p className="menu-text-color quicksand-regular font-bold   ">Tags: <span className="primary-text-color text-base font-bold quicksand-regular pl-4">{tags}</span></p>
+        {/* thumbnail,
+    title,
+    price,
+
+    rating,
+    id,
+    description,
+    weight,
+    shippingInformation,
+    availabilityStatus,
+    warrantyInformation,
+    depth,
+    height,
+    width,
+    sku,
+    brand,
+    tags,
+    stock,
+    discountPercentage,
+    category, */}
+        <div className="flex w-1/2 justify-between">
+            <div className=" ">
+                 <div className="flex gap-2">
+                   <p className="menu-text-color quicksand-regular font-bold w-[50px]   ">Brand:</p>  <span className="primary-text-color text-base font-bold quicksand-regular ">{brand}</span>
+                 </div>
+                 <div className="flex gap-2">
+                   <p className="menu-text-color quicksand-regular font-bold w-[50px]    ">Stock:</p>  <span className="primary-text-color text-base font-bold quicksand-regular ">{stock} Items Left</span>
+                 </div>
+                 <div className="flex gap-2">
+                   <p className="menu-text-color quicksand-regular font-bold w-[50px]    ">Tags:</p>  <span className="primary-text-color text-base font-bold quicksand-regular ">{tags} </span>
+                 </div>
+               
+                 <div className="flex gap-2">
+                   <p className="menu-text-color quicksand-regular font-bold w-[50px]    ">Height:</p>  <span className="primary-text-color text-base font-bold quicksand-regular ">{height} </span>
+                 </div>
+               
+                 <div className="flex gap-2">
+                   <p className="menu-text-color quicksand-regular font-bold w-[50px]    ">Width:</p>  <span className="primary-text-color text-base font-bold quicksand-regular ">{width} </span>
+                 </div>
+                 <div className="flex gap-2">
+                   <p className="menu-text-color quicksand-regular font-bold w-[50px]    ">SKU:</p>  <span className="primary-text-color text-base font-bold quicksand-regular ">{sku} </span>
+                 </div>
+               
+            
+            </div>
+            <div className=" ">
+                 <div className="flex gap-2">
+                   <p className="menu-text-color quicksand-regular font-bold w-[50px]   ">Brand:</p>  <span className="primary-text-color text-base font-bold quicksand-regular ">{brand}</span>
+                 </div>
+                 <div className="flex gap-2">
+                   <p className="menu-text-color quicksand-regular font-bold w-[50px]    ">Stock:</p>  <span className="primary-text-color text-base font-bold quicksand-regular ">{stock} Items Left</span>
+                 </div>
+                 <div className="flex gap-2">
+                   <p className="menu-text-color quicksand-regular font-bold w-[50px]    ">Tags:</p>  <span className="primary-text-color text-base font-bold quicksand-regular ">{tags} </span>
+                 </div>
+               
+                 <div className="flex gap-2">
+                   <p className="menu-text-color quicksand-regular font-bold w-[50px]    ">Height:</p>  <span className="primary-text-color text-base font-bold quicksand-regular ">{height} </span>
+                 </div>
+               
+                 <div className="flex gap-2">
+                   <p className="menu-text-color quicksand-regular font-bold w-[50px]    ">Width:</p>  <span className="primary-text-color text-base font-bold quicksand-regular ">{width} </span>
+                 </div>
+                 <div className="flex gap-2">
+                   <p className="menu-text-color quicksand-regular font-bold w-[50px]    ">SKU:</p>  <span className="primary-text-color text-base font-bold quicksand-regular ">{sku} </span>
+                 </div>
+               
+            
             </div>
             <div></div>
         </div>

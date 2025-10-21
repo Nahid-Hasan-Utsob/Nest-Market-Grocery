@@ -7,9 +7,15 @@ export default function Product_Details() {
   const product = useLoaderData();
 
   return (
-    <div className="flex my-3">
-              <Product_Common_Componant product={product}></Product_Common_Componant>
-              <Product_RIght_section product={product}></Product_RIght_section>
+    <div >
+            <div className="flex my-3 justify-between">
+          <div>
+                <Product_RIght_section product={product}></Product_RIght_section>
+          </div>
+            </div>
+              {/* <div>
+                <Project_Des_Viewer_Main></Project_Des_Viewer_Main>
+              </div> */}
     </div>
   );
 }

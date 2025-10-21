@@ -12,6 +12,7 @@ import Main_Layout from "../Layout/Main_Layout";
 import Cart from "../Pages/Cart/Cart";
 import Product_Details from "../Pages/Product_Details.jsx/Product_Card/Product_Details";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,6 +43,7 @@ const router = createBrowserRouter([
         },
         handle: { scroll: false } ,
         element: <Product_Details></Product_Details>,
+        
       },
       {
         path: "/about_us",
@@ -77,6 +79,7 @@ const router = createBrowserRouter([
         path: "/cart",
         element: <Cart></Cart>,
       },
+        
     ],
   },
 ]);

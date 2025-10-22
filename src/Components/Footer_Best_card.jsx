@@ -2,8 +2,7 @@ import React from 'react';
 import img1 from '../assets/Icon-Images/icon.png';
 import img2 from '../assets/Icon-Images/hand.png';
 import img3 from '../assets/Icon-Images/man.png';
-import img5 from '../assets/Icon-Images/tag.png';
-import img4 from '../assets/Icon-Images/parcel.png';
+import img4 from '../assets/Icon-Images/tag.png';
 
 export default function Footer_Best_card() {
   const bestCard = [
@@ -27,17 +26,12 @@ export default function Footer_Best_card() {
       subtitle: 'Mega Discounts',
       img: img4,
     },
-    {
-      title: 'Easy returns',
-      subtitle: 'Within 30 days',
-      img: img5,
-    },
   ];
 
   return (
-    <section className="lg:grid lg:grid-cols-5 grid-cols-2 justify-around items-center my-5 hidden">
+    <section className="lg:grid lg:grid-cols-4 grid-cols-2 justify-around items-center my-5 hidden">
       {bestCard.map((card, index) => (
-        <div key={index} className="flex  gap-5 items-center justify-start bg-white p-4 rounded-lg shadow">
+        <div key={index} className="flex  gap-5 items-center justify-start bg-white p-4 rounded-lg shadow w-fit">
           <div>
             <img src={card.img} alt={card.title} className="h-16 w-16" />
           </div>

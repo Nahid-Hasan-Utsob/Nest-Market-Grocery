@@ -43,7 +43,7 @@ export default function About_us() {
     <section className="px-4 sm:px-6 lg:px-10">
       {/* === About section === */}
       <section className="flex flex-col lg:flex-row quicksand-regular my-10 lg:my-20 items-center justify-center gap-6 lg:gap-10">
-        <div className="w-full lg:w-1/2 flex items-center justify-center">
+        <div className="w-full lg:w-1/2 lg:flex items-center justify-center hidden">
           <img
             className="rounded-2xl w-[90%] sm:w-[80%] object-cover"
             src="https://cdn.pixabay.com/photo/2024/07/04/08/48/swing-8872109_1280.jpg"

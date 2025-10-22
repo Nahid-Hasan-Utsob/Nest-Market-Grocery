@@ -30,9 +30,7 @@ export default function Footer_Banner() {
             </h1>
           </div>
 
-          <div className="z-30">
-            <Caro_Search  />
-          </div>
+          
         </div>
 
         {/* DeliveryMan Image */}

@@ -100,9 +100,7 @@ export default function Carousel() {
                       <h1 className="text-gray-300 md:mt-8 md:text-base text-xs md:pt-0 pt-2 ">{slide.subtitle}</h1>
                     </div>
                   </div>
-                  <div className="md:w-1/2">
-                    <Caro_Search></Caro_Search>
-                  </div>
+                 
                 </div>
               </div>
             </div>

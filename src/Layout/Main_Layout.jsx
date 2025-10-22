@@ -5,6 +5,7 @@ import Footer_Banner from "../Components/Footer_Banner";
 import Footer_Bottom from "../Components/Footer_Bottom";
 import Footer_Best_card from "../Components/Footer_Best_card";
 import ScrollToTop from "./ScrollToTop";
+import BackButton from "../Components/BackButton";
 
 
 export default function Main_Layout() {
@@ -24,8 +25,12 @@ export default function Main_Layout() {
 
    <div className="hidden lg:block">
       {!hideNav && <Category_Nav></Category_Nav>}
-   </div>
+
      {!hideNav &&  <Search_Cart_Nav></Search_Cart_Nav>}
+
+      
+     
+     </div>
 
 <div>
 

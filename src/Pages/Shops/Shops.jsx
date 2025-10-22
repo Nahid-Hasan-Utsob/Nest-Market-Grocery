@@ -36,10 +36,64 @@ export default function Shops() {
     setSearchParams({ category: catSlug });
   };
 
+  // For mobile dropdown
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const selectedCategoryName =
+    selectedCategory === "all"
+      ? "All Products"
+      : categories.find((cat) => cat.slug === selectedCategory)?.name ||
+        selectedCategory;
+
   return (
-    <div className="flex flex-col md:flex-row min-h-[100vh] my-20">
-      {/* Left Sidebar */}
-      <aside className="w-[20%]  p-4 border-b md:border-b-0 md:border-r border-gray-400 quicksand-regular">
+    <div className="flex flex-col md:flex-row min-h-[100vh] my-10">
+
+      {/* Mobile Dropdown for categories */}
+      <div className="md:hidden w-full px-4 mb-4 z-50">
+        <div className="relative">
+          <button
+            onClick={() => setDropdownOpen(!dropdownOpen)}
+            className="w-full bg-gray-100 p-2 rounded-md flex justify-between items-center"
+          >
+            {selectedCategoryName}
+            <span className="ml-2">{dropdownOpen ? "▲" : "▼"}</span>
+          </button>
+          {dropdownOpen && (
+            <ul className="absolute w-full bg-white border mt-1 rounded-md z-10 max-h-60 overflow-auto">
+              <li
+                className={`p-2 cursor-pointer ${
+                  selectedCategory === "all" ? "bg-blue-600 text-white" : ""
+                }`}
+                onClick={() => {
+                  handleCategoryClick("all");
+                  setDropdownOpen(false);
+                }}
+              >
+                All Products
+              </li>
+              {categories.map((cat) => (
+                <li
+                  key={cat.slug}
+                  className={`p-2 cursor-pointer capitalize ${
+                    selectedCategory === cat.slug
+                      ? "bg-blue-600 text-white"
+                      : ""
+                  }`}
+                  onClick={() => {
+                    handleCategoryClick(cat.slug);
+                    setDropdownOpen(false);
+                  }}
+                >
+                  {cat.name}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+
+      {/* Left Sidebar for desktop */}
+      <aside className="hidden md:block w-[20%] p-4 border-r border-gray-400 quicksand-regular">
         <h2 className="text-xl font-bold mb-4">
           Categories ({categories.length})
         </h2>
@@ -58,10 +112,10 @@ export default function Shops() {
           {categories.map((cat) => (
             <li
               key={cat.slug}
-             className={` lg:px-4 p-1 rounded-md capitalize  lg:text-base text-[12px]     ${
-              selectedCategory === (cat.slug || cat)
-                ? "primary-text-color text-white"
-                : "bg-white menu-text-color "
+              className={`lg:px-4 p-1 rounded-md capitalize lg:text-base text-[12px] ${
+                selectedCategory === cat.slug
+                  ? "primary-text-color text-white"
+                  : "bg-white menu-text-color"
               }`}
               onClick={() => handleCategoryClick(cat.slug)}
             >
@@ -71,10 +125,12 @@ export default function Shops() {
         </ul>
       </aside>
 
-      {/* Right Products Section */}
-      <main className="w-full  lg:p-4 grid lg:grid-cols-4 md:grid-cols-3  grid-cols-2 md:gap-5 gap-2">
+      {/* Products Section */}
+      <main className="w-full md:w-4/5 p-4 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-5 gap-2">
         {products.length === 0 ? (
-          <p className="secondary-text-color col-span-full">No products found.</p>
+          <p className="secondary-text-color col-span-full">
+            No products found.
+          </p>
         ) : (
           products.map((product) => (
             <ProductCard key={product.id} product={product} />

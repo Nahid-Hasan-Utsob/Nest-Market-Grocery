@@ -8,7 +8,7 @@ export default function Blog_Card({ cardData }) {
     <section className="quicksand-regular flex flex-col items-center lg:p-2 p-1 bg-gray-200  rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
       <div className="w-full">
         <img
-          className="rounded-2xl lg:h-[300px] h-[150px] md:h-[200px] w-full object-cover lg:my-6 lg:px-5 "
+          className="rounded-2xl lg:h-[300px] h-[150px] md:h-[200px] w-full object-cover  "
           src={img}
           alt='Not Found'
         />

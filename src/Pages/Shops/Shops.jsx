@@ -4,6 +4,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { TbCategory2 } from "react-icons/tb";
 import ProductCard from "../../Home_Pages/Home-Header/Home_Components/Home_Popular/ProductCard/ProductCard";
 import BackButton from "../../Components/BackButton";
+import CartIcon from "../../Components/CartIcon";
 
 export default function Shops() {
   const [categories, setCategories] = useState([]);
@@ -72,7 +73,8 @@ export default function Shops() {
       <div></div>
       <div className="flex flex-col md:flex-row min-h-[100vh] lg:my-10 ">
         {/* Mobile dropdown */}
-        <div className="md:hidden w-2/3  mb-4 ">
+   <div className="flex items-center justify-between">
+         <div className="md:hidden w-2/3  mb-4 ">
           <div className="category-class w-full">
             <li className="flex items-center text-white text-[13px] list-none">
               <div className="primary-bg-color rounded-md flex items-center pl-3 w-full">
@@ -92,8 +94,13 @@ export default function Shops() {
               </div>
             </li>
           </div>
-        </div>
 
+        
+        </div>
+                  <div>
+            <CartIcon></CartIcon>
+          </div>
+   </div>
         {/* Desktop sidebar */}
         <aside className="hidden md:block w-[20%] p-4 border-r border-gray-400 quicksand-regular">
           <h2 className="text-xl font-bold mb-4">

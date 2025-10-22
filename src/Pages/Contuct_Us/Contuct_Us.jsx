@@ -30,7 +30,7 @@ export default function Contuct_Us() {
   ];
 
   return (
-    <section className="lg:my-20 my-10 px-3 sm:px-5 md:px-10">
+    <section className="lg:my-20  px-3 ">
       {/* ----------- Top Section ------------- */}
       <div className="flex flex-col lg:flex-row w-full items-center gap-8">
         <div className="w-full lg:w-1/2 mt-4 lg:mt-0">

@@ -5,16 +5,16 @@ export default function Home_header() {
   const header_links = (
     <>
       <li className="flex items-center secondary-text-color text-[13px] border-r-2 border-gray-300 pr-3 h-3">
-        <Link to="/about_us">About Us</Link>
+        <Link to="/">About Us</Link>
       </li>
       <li className="flex items-center secondary-text-color text-[13px] border-r-2 border-gray-300 pr-3 h-3">
-        <Link to="/account">My Account</Link>
+        <Link to="/">My Account</Link>
       </li>
       <li className="flex items-center secondary-text-color text-[13px] border-r-2 border-gray-300 pr-3 h-3">
-        <Link to="/wishlist">Wishlist</Link>
+        <Link to="/">Wishlist</Link>
       </li>
       <li className="flex items-center secondary-text-color text-[13px] pr-4">
-        <Link to="/tracking">Order Tracking</Link>
+        <Link to="/">Order Tracking</Link>
       </li>
     </>
   );

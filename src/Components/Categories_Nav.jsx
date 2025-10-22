@@ -18,7 +18,7 @@ export default function Categories_Nav() {
 
   return (
     <section>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center lg:py-5">
         <div className="flex items-center gap-4">
           {/* Browse All Categories Dropdown */}
           <div className="category-class w-[250px]">

@@ -70,7 +70,7 @@ export default function RandomProductsSection({ products }) {
 
               {/* Text + Button */}
               <div className="quicksand-regular text-2xl  w-2/3 font-bold absolute inset-0 flex flex-col justify-center items-start  px-8 z-10">
-                <h2 className="text-5xl font-bold mb-3 leading-snug">
+                <h2 className="text-5xl font-bold mb-3 leading-snug menu-text-color">
                   {item.title}
                 </h2>
                 <Card_Button text="Shop Now" className={"mt-3"}></Card_Button>

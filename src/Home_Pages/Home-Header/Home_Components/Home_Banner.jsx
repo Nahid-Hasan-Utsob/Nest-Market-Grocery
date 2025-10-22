@@ -61,7 +61,7 @@ export default function Home_Banner() {
 
           {/* Text + Button */}
           <div className="quicksand-regular text-2xl w-4/5 font-bold absolute inset-0 flex flex-col justify-center items-start md:px-8 px-3 z-10">
-            <h2 className="md:text-2xl text-xs font-bold md:mb-3 leading-snug">
+            <h2 className="md:text-2xl text-xs font-bold md:mb-3 menu-text-color leading-snug">
               {item.title}
             </h2>
             <Card_Button text="Shop Now" className={"md:mt-3 mt-1"} />

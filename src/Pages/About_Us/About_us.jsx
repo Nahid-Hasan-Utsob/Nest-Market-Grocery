@@ -53,15 +53,15 @@ export default function About_us() {
 
         <div className="w-full lg:w-1/2">
           <div className="text-[10px] sm:text-[15px] md:text-[17px] lg:text-[17px] w-full sm:w-[90%] mx-auto">
-            <p className="text-lg sm:text-[15px] md:text-[17px] lg:text-4xl font-bold">
+            <p className="text-lg sm:text-[15px] md:text-[17px] lg:text-4xl font-bold menu-text-color">
               Welcome to Nests
             </p>
-            <p className="pt-2 sm:pt-4 md:pt-6">
+            <p className="pt-2 sm:pt-4 md:pt-6 secondary-text-color">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <br />
-            <p>
+            <p className="secondary-text-color">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -100,7 +100,7 @@ export default function About_us() {
       <div>
         <Text
           text="What We Provide?"
-          className="menu-text-main text-2xl sm:text-[15px] md:text-4xl lg:text-5xl quicksand-regular font-bold text-center my-8 lg:my-15"
+          className="menu-text-main text-2xl sm:text-[15px] md:text-4xl lg:text-5xl quicksand-regular font-bold text-center my-8 lg:my-15 menu-text-color"
         />
       </div>
 
@@ -136,15 +136,15 @@ export default function About_us() {
 
         <div className="w-full lg:w-1/2 mt-4 lg:mt-0">
           <div className="text-[10px] sm:text-[15px] md:text-[17px] lg:text-[17px] w-full sm:w-[90%] mx-auto">
-            <p className="text-lg sm:text-[15px] md:text-[17px] lg:text-2xl font-bold">
+            <p className="text-lg sm:text-[15px] md:text-[17px] lg:text-4xl font-bold  menu-text-color">
               Your Partner for e-commerce grocery solution
             </p>
-            <p className="pt-2 sm:pt-4 md:pt-6">
+            <p className="pt-2 sm:pt-4 md:pt-6 menu-text-color">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <br />
-            <p>
+            <p className="secondary-text-color">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>

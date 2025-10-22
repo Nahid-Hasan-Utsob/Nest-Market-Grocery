@@ -97,7 +97,7 @@ export default function Shops() {
 
         
         </div>
-                  <div>
+                  <div className="lg:hidden block">
             <CartIcon></CartIcon>
           </div>
    </div>

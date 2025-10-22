@@ -38,15 +38,15 @@ export default function Contuct_Us() {
             <p className="primary-text-color lg:text-2xl text-base font-bold my-3">
               How can help you ?
             </p>
-            <p className="text-lg sm:text-[13px] md:text-[15px] lg:text-5xl font-bold leading-snug">
+            <p className="text-lg sm:text-[13px] md:text-[15px] lg:text-5xl font-bold leading-snug menu-text-color">
               Your Partner for e-commerce grocery solution
             </p>
-            <p className="pt-2 sm:pt-4 md:pt-6 text-[10px] sm:text-[13px] md:text-[15px]">
+            <p className="pt-2 sm:pt-4 md:pt-6 text-[10px] sm:text-[13px] md:text-[15px] secondary-text-color">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <br />
-            <p className="text-[10px] sm:text-[13px] md:text-[15px]">
+            <p className="text-[10px] sm:text-[13px] md:text-[15px] secondary-text-color">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -127,46 +127,47 @@ export default function Contuct_Us() {
             *
           </p>
 
-          <form className="mt-6 space-y-4">
-            <div className="grid sm:grid-cols-2 gap-4">
-              <input
-                type="text"
-                placeholder="First Name"
-                className="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500 text-[10px] sm:text-[13px] md:text-[15px]"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500 text-[10px] sm:text-[13px] md:text-[15px]"
-              />
-            </div>
+         <form className="mt-6 space-y-4">
+  <div className="grid sm:grid-cols-2 gap-4">
+    <input
+      type="text"
+      placeholder="First Name"
+      className="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500 text-[10px] sm:text-[13px] md:text-[15px] text-black"
+    />
+    <input
+      type="email"
+      placeholder="Your Email"
+      className="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500 text-[10px] sm:text-[13px] md:text-[15px] text-black"
+    />
+  </div>
 
-            <div className="grid sm:grid-cols-2 gap-4">
-              <input
-                type="text"
-                placeholder="Your Phone"
-                className="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500 text-[10px] sm:text-[13px] md:text-[15px]"
-              />
-              <input
-                type="text"
-                placeholder="Subject"
-                className="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500 text-[10px] sm:text-[13px] md:text-[15px]"
-              />
-            </div>
+  <div className="grid sm:grid-cols-2 gap-4">
+    <input
+      type="text"
+      placeholder="Your Phone"
+      className="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500 text-[10px] sm:text-[13px] md:text-[15px] text-black"
+    />
+    <input
+      type="text"
+      placeholder="Subject"
+      className="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500 text-[10px] sm:text-[13px] md:text-[15px] text-black"
+    />
+  </div>
 
-            <textarea
-              placeholder="Your Message"
-              rows="5"
-              className="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500 text-[10px] sm:text-[13px] md:text-[15px]"
-            ></textarea>
+  <textarea
+    placeholder="Your Message"
+    rows="5"
+    className="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500 text-[10px] sm:text-[13px] md:text-[15px] text-black"
+  ></textarea>
 
-            <button
-              type="submit"
-              className="bg-[#0b2447] hover:bg-[#19376d] text-white font-semibold py-3 px-6 rounded-lg transition text-[10px] sm:text-[13px] md:text-[15px]"
-            >
-              Send message
-            </button>
-          </form>
+  <button
+    type="submit"
+    className="bg-[#0b2447] hover:bg-[#19376d] text-white font-semibold py-3 px-6 rounded-lg transition text-[10px] sm:text-[13px] md:text-[15px]"
+  >
+    Send message
+  </button>
+</form>
+
         </div>
 
         {/* Right Side - Image */}

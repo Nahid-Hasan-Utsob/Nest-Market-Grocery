@@ -7,7 +7,7 @@ export default function Category_Product_Card({category }) {
 
   return (
     <section>
-       <div className=' w-fit flex flex-col justify-center items-center card-bg-color py-5 px-7 rounded-xl' >
+       <div className=' w-fit flex flex-col justify-center items-center card-bg-color py-5 px-7 rounded-xl cursor-pointer' >
            <div> <img className='w-[100px] h-[80px] object-contain' src={url} alt="" /></div>
            <div className='flex flex-col justify-center items-center '>
             <p className='font-bold text-base quicksand-regular menu-text-color'>{name}</p>

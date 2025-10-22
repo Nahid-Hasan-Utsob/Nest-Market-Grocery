@@ -50,7 +50,7 @@ export default function Cart() {
 
       <div className="rounded-lg overflow-x-auto">
         <table className="w-full text-left">
-          <thead className="bg-gray-100">
+          <thead className="bg-gray-100 menu-text-color">
             <tr>
               <th className="p-3 text-[12px] lg:text-[18px]">Product</th>
               <th className="p-3 text-[12px] lg:text-[18px] text-center">
@@ -70,7 +70,7 @@ export default function Cart() {
 
           <tbody>
             {cart.map((item) => (
-              <tr key={item.id} className="border-b">
+              <tr key={item.id} className="border-b  menu-text-color">
                 <td className="lg:p-3 flex items-center lg:gap-3 gap-1">
                   <img
                     src={item.thumbnail}
@@ -122,7 +122,7 @@ export default function Cart() {
 
       {/* total price */}
       <div className="flex justify-end mt-6">
-        <div className="text-right">
+        <div className="text-right  menu-text-color">
           <p className="lg:text-lg text-[15px] font-semibold">
             Total:{" "}
             <span className="text-green-600">${totalPrice.toFixed(2)}</span>

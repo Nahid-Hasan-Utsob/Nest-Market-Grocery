@@ -61,7 +61,7 @@ export default function ProductCard({ product }) {
             {category}
           </p>
 
-          <h2 className="menu-text-color lg:text-lg font-semibold text-[13px] mb-1 lg:mb-3 quicksand-regular">
+          <h2 className="menu-text-color lg:text-lg font-semibold text-[13px] lg:h-[45px] h-[25px] mb-2 quicksand-regular flex items-center">
             {title}
           </h2>
 

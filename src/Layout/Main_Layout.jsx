@@ -34,7 +34,7 @@ export default function Main_Layout() {
       
      
      </div>
-     <div className="flex items-center justify-between lg:hidden my-5">
+     <div className="flex items-center justify-between lg:hidden py-5">
       <MobileDrawer></MobileDrawer>
       <Search_Fields></Search_Fields>
      </div>

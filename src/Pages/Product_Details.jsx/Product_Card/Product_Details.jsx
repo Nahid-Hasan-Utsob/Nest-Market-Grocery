@@ -10,7 +10,7 @@ export default function Product_Details() {
 
   return (
 <section>
-  <div className="flex justify-end items-center">
+  <div className="flex lg:hidden justify-end items-center">
     <CartIcon></CartIcon>
   </div>
       <div >

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import { TbCategory2 } from "react-icons/tb";
 import ProductCard from "../../Home_Pages/Home-Header/Home_Components/Home_Popular/ProductCard/ProductCard";
 
 export default function Shops() {
@@ -36,7 +37,7 @@ export default function Shops() {
     setSearchParams({ category: catSlug });
   };
 
-  // For mobile dropdown
+  // Mobile dropdown toggle
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const selectedCategoryName =
@@ -49,46 +50,25 @@ export default function Shops() {
     <div className="flex flex-col md:flex-row min-h-[100vh] my-10">
 
       {/* Mobile Dropdown for categories */}
-      <div className="md:hidden w-full px-4 mb-4 z-50">
-        <div className="relative">
-          <button
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-            className="w-full bg-gray-100 p-2 rounded-md flex justify-between items-center"
-          >
-            {selectedCategoryName}
-            <span className="ml-2">{dropdownOpen ? "▲" : "▼"}</span>
-          </button>
-          {dropdownOpen && (
-            <ul className="absolute w-full bg-white border mt-1 rounded-md z-10 max-h-60 overflow-auto">
-              <li
-                className={`p-2 cursor-pointer ${
-                  selectedCategory === "all" ? "bg-blue-600 text-white" : ""
-                }`}
-                onClick={() => {
-                  handleCategoryClick("all");
-                  setDropdownOpen(false);
-                }}
+      <div className="md:hidden w-2/3 px-4 mb-4 z-50">
+        <div className="category-class w-full">
+          <li className="flex items-center text-white text-[13px] list-none">
+            <div className="primary-bg-color rounded-md flex items-center pl-3 w-full">
+              <TbCategory2 className="text-xl mr-2" />
+              <select
+                value={selectedCategory}
+                onChange={(e) => handleCategoryClick(e.target.value)}
+                className="select select-ghost w-full bg-transparent text-white"
               >
-                All Products
-              </li>
-              {categories.map((cat) => (
-                <li
-                  key={cat.slug}
-                  className={`p-2 cursor-pointer capitalize ${
-                    selectedCategory === cat.slug
-                      ? "bg-blue-600 text-white"
-                      : ""
-                  }`}
-                  onClick={() => {
-                    handleCategoryClick(cat.slug);
-                    setDropdownOpen(false);
-                  }}
-                >
-                  {cat.name}
-                </li>
-              ))}
-            </ul>
-          )}
+                <option value="all">All Categories</option>
+                {categories.map((cat) => (
+                  <option key={cat.slug} value={cat.slug}>
+                    {cat.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </li>
         </div>
       </div>
 

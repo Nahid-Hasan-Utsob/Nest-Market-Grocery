@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import deliveryMan from "../../assets/Icon-Images/banner-13.png.png";
 import icon from "../../assets/Icon-Images/man.png";
 import Common_Image from "../../Components/Common_Image";
 import Text from "../../Components/Text";
 import Blog_Card from "./Blog_Card";
+import { Bars } from "react-loader-spinner";
+
 export default function Blogs() {
+  // Loader state
+  const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const blogsPerPage = 12;
+
+  
 const cardData = [
   {
     title: "Exploring the Hidden Secrets of Morning Dew",
@@ -308,29 +317,39 @@ const cardData = [
   },
 ];
 
-const [currentPage, setCurrentPage] = useState(1);
-  const blogsPerPage = 12;
 
+  // Pagination logic
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
   const currentBlogs = cardData.slice(indexOfFirstBlog, indexOfLastBlog);
 
   const totalPages = Math.ceil(cardData.length / blogsPerPage);
-const handleNext = () => {
-  if (currentPage < totalPages) {
-    setCurrentPage(currentPage + 1);
-    window.scrollTo({ top: 0, behavior: "smooth" }); // 👈 স্ক্রল টপে যাবে
-  }
-};
-const handlePrev = () => {
-  if (currentPage > 1) {
-    setCurrentPage(currentPage - 1);
-    window.scrollTo({ top: 0, behavior: "smooth" }); // 👈 স্ক্রল টপে যাবে
-  }
-};
 
-  return ( <section className="lg:my-20">
-      {/* 🟦 Header Section */}
+  const handleNext = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  // Simulate data loading (API call)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500); // 1.5 seconds delay
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <section className="lg:my-20">
+      {/* Header Section */}
       <section>
         <div className="relative bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 overflow-hidden rounded-2xl">
           <div
@@ -358,52 +377,71 @@ const handlePrev = () => {
         </div>
       </section>
 
-      {/* 🟢 Section Title */}
+      {/* Section Title */}
       <div className="flex items-center lg:gap-5 gap-2 lg:my-16 my-8">
         <Common_Image className={"lg:w-[50px] w-[40px]"} img={icon}></Common_Image>
         <Text
           text={"Recips Articles"}
-          className={"lg:text-[40px] text-[18px] menu-text-color quicksand-regular font-bold"}
+          className={
+            "lg:text-[40px] text-[18px] menu-text-color quicksand-regular font-bold"
+          }
         ></Text>
       </div>
 
-      {/* 🟡 Blog Grid */}
-      <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 lg:gap-10 gap-3">
-        {currentBlogs.map((blog, index) => (
-          <Blog_Card key={index} cardData={blog}></Blog_Card>
-        ))}
-      </div>
+      {/* Blog Grid with Loader */}
+      {loading ? (
+            <div className="flex justify-center items-center h-[400px]">
+          <Bars
+            height="30"
+            width="30"
+            color="#3bb77e"
+            ariaLabel="bars-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+       
+        </div>
+      ) : (
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 lg:gap-10 gap-3">
+          {currentBlogs.map((blog, index) => (
+            <Blog_Card key={index} cardData={blog}></Blog_Card>
+          ))}
+        </div>
+      )}
 
-      {/* 🔵 Pagination Buttons */}
-      <div className="flex justify-center items-center gap-6 mt-10">
-        <button
-          onClick={handlePrev}
-          disabled={currentPage === 1}
-          className={`lg:px-6 lg:py-2 px-3 py-1 lg:rounded-xl rounded-md  font-semibold text-xs hover:text-white${
-            currentPage === 1
-              ? " text-white cursor-pointer bg-blue-600 "
-              : " bg-gray-300 menu-text-color hover:bg-blue-600 text-white hover:text-white"
-          }`}
-        >
-          Prev
-        </button>
+      {/* Pagination Buttons */}
+      {!loading && (
+        <div className="flex justify-center items-center gap-6 mt-10">
+          <button
+            onClick={handlePrev}
+            disabled={currentPage === 1}
+            className={`lg:px-6 lg:py-2 px-3 py-1 lg:rounded-xl rounded-md  font-semibold text-xs hover:text-white${
+              currentPage === 1
+                ? " text-white cursor-pointer bg-blue-600 "
+                : " bg-gray-300 menu-text-color hover:bg-blue-600 text-white hover:text-white"
+            }`}
+          >
+            Prev
+          </button>
 
-        <span className="lg:text-lg text-[12px] font-semibold menu-text-color">
-          Page {currentPage} of {totalPages}
-        </span>
+          <span className="lg:text-lg text-[12px] font-semibold menu-text-color">
+            Page {currentPage} of {totalPages}
+          </span>
 
-        <button
-          onClick={handleNext}
-          disabled={currentPage === totalPages}
-          className={`lg:px-6 lg:py-2 px-3 py-1 lg:rounded-xl rounded-md  font-semibold text-xs  ${
-            currentPage === totalPages
-               ? " text-white cursor-not-allowed bg-blue-600 hover:text-white"
-              : " bg-gray-300 menu-text-color hover:bg-blue-600 text-white hover:text-white"
-          }`}
-        >
-          Next
-        </button>
-      </div>
+          <button
+            onClick={handleNext}
+            disabled={currentPage === totalPages}
+            className={`lg:px-6 lg:py-2 px-3 py-1 lg:rounded-xl rounded-md  font-semibold text-xs  ${
+              currentPage === totalPages
+                ? " text-white cursor-not-allowed bg-blue-600 hover:text-white"
+                : " bg-gray-300 menu-text-color hover:bg-blue-600 text-white hover:text-white"
+            }`}
+          >
+            Next
+          </button>
+        </div>
+      )}
     </section>
   );
 }

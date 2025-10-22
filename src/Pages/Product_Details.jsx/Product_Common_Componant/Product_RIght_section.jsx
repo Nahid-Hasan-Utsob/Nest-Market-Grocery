@@ -20,6 +20,7 @@ export default function Product_RIght_section({ product }) {
     height,
     width,
     sku,
+    thumbnail,
     brand,
     reviews,
     tags,
@@ -48,7 +49,7 @@ export default function Product_RIght_section({ product }) {
             {/* responsive image */}
             <img
               className="w-full max-w-[560px] h-auto object-contain"
-              src={images}
+              src={thumbnail}
               alt={product?.title || "product image"}
             />
           </div>

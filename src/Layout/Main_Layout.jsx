@@ -6,6 +6,9 @@ import Footer_Bottom from "../Components/Footer_Bottom";
 import Footer_Best_card from "../Components/Footer_Best_card";
 import ScrollToTop from "./ScrollToTop";
 import BackButton from "../Components/BackButton";
+import DrawerSsidebar from "../Components/MobileDrawer";
+import MobileDrawer from "../Components/MobileDrawer";
+import Search_Fields from "../Home_Pages/Home-Header/Navbar/Sesrch_Fileds";
 
 
 export default function Main_Layout() {
@@ -21,8 +24,8 @@ export default function Main_Layout() {
 
   return (
  
-    <div className="lato-regular max-w-[1550px] mx-auto lg:px-0 px-1">
-
+    <div className="lato-regular max-w-[1550px] mx-auto lg:px-0 px-[7px]">
+      
    <div className="hidden lg:block">
       {!hideNav && <Category_Nav></Category_Nav>}
 
@@ -31,7 +34,10 @@ export default function Main_Layout() {
       
      
      </div>
-
+     <div className="flex items-center justify-between lg:hidden my-5">
+      <MobileDrawer></MobileDrawer>
+      <Search_Fields></Search_Fields>
+     </div>
 <div>
 
          <ScrollToTop></ScrollToTop>

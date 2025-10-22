@@ -329,7 +329,7 @@ const handlePrev = () => {
   }
 };
 
-  return ( <section className="my-20">
+  return ( <section className="lg:my-20">
       {/* 🟦 Header Section */}
       <section>
         <div className="relative bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 overflow-hidden rounded-2xl">

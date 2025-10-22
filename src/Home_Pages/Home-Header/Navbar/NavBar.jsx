@@ -24,7 +24,7 @@ export default function NavBar() {
           </span>
         </div>
         <div className="flex items-center gap-3 secondary-text-color ato-regular   text-base]">
-          <div className="relative inline-block">
+          <div className="relative lg:inline-block hidden ">
             <FiHeart className="lg:w-7 lg:h-7 w-6 h-6  text-black" />
 
             <span className="absolute lg:-top-1 -top-2 -right-1 primary-bg-color  text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
@@ -44,9 +44,9 @@ export default function NavBar() {
           </div>
           <p className="hidden md:block">Cart</p>
         </div></Link>
-        <div className="md:flex items-center gap-3 secondary-text-color ato-regular   text-base] hidden">
-          <VscAccount className="w-7 h-7  text-black" />
-          <p>Accounts</p>
+        <div className="md:flex items-center gap-3 secondary-text-color ato-regular   text-base]">
+          <VscAccount className="lg:w-7 lg:h-7 w-6 h-6    text-black" />
+          <p className="hidden md:block">Accounts</p>
         </div>
       </div>
     </section>

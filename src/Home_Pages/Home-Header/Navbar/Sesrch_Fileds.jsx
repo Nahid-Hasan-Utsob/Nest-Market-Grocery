@@ -9,6 +9,7 @@ export default function Search_Fields() {
   const handleSearch = () => {
     if (query.trim() !== "") {
       navigate(`/shops?search=${encodeURIComponent(query.trim())}`);
+      setQuery(""); // ✅ search-এর পরে input খালি করে দিচ্ছে
     }
   };
 
@@ -17,9 +18,9 @@ export default function Search_Fields() {
   };
 
   return (
-    <section className="min-w-1/2">
+    <section className="lg:w-full">
       <div className="w-full">
-        <div className="flex border-2 border-green-300 rounded-lg overflow-hidden shadow-sm max-w-xl mx-auto p-[2px] h-12 w-full">
+        <div className="flex lg:border-2 border-green-300 rounded-lg overflow-hidden lg:shadow-sm max-w-xl mx-auto lg:p-[2px] p-[1px] lg:h-12 h-8 w-full">
           {/* Search input */}
           <input
             type="text"
@@ -27,13 +28,13 @@ export default function Search_Fields() {
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleEnter}
             placeholder="Search for products..."
-            className="flex-grow px-4 text-black focus:outline-none secondary-text-color text-[14px] placeholder:text-[14px] placeholder:italic lato-regular w-full"
+            className="flex-grow lg:px-4 px-1 text-black focus:outline-none secondary-text-color text-[12px] w-[100px] placeholder:text-[10px] lg:text-[14px] lg:placeholder:text-[14px] placeholder:italic lato-regular lg:w-full"
             style={{ border: "none" }}
           />
 
           <button
             onClick={handleSearch}
-            className="primary-bg-color text-white font-semibold quicksand-regular text-[14px] py-3 px-5 focus:outline-none rounded-md flex items-center"
+            className="primary-bg-color text-white font-semibold quicksand-regular lg:text-[14px] text-[12px] lg:py-3 py-1 lg:px-5 px-2 focus:outline-none rounded-md flex items-center"
           >
             Search
           </button>

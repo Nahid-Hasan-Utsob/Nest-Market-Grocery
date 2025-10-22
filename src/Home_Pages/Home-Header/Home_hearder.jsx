@@ -52,30 +52,9 @@ export default function Home_header() {
   );
 
   return (
-    <section>
-      <div className="navbar bg-base-100 pt-5">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {" "}
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
-              </svg>
-            </div>
-            <ul className="lg:flex gap-3 items-center hidden">{header_links}</ul>
-          </div>
-        </div>
+    <section className="hidden lg:block">
+      <div className=" lg:pt-5 justify-around flex">
+          <div className="navbar-start  hidden lg:flex">{header_links}</div>
         <div className="navbar-center hidden lg:flex">
           <p className="text-[14px] primary-text-color font-bold">
             100% Secure delivery without contacting the courier

@@ -22,16 +22,19 @@ export default function Home() {
   return (
     <div>
       <Home_header></Home_header>
-      <div className="flex items-center justify-between mt-8">
+      <div className="flex items-center justify-between lg:mt-8">
         <Logo></Logo>
        <div className="hidden md:block w-full">
          <Sesrch_Fileds></Sesrch_Fileds>
        </div>
         <div>
+          <div>
+            
+          </div>
           <NavBar></NavBar>
         </div>
       </div>
-      <div className="mt-8">
+      <div className="lg:mt-8">
        <div  className="hidden md:block">
          <Categories_Nav></Categories_Nav>
        </div>

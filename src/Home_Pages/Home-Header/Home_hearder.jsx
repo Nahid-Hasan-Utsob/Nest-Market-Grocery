@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 export default function Home_header() {
   const header_links = (
     <>
-      <li className="flex items-center secondary-text-color text-[13px] border-r-2 border-gray-300 pr-3 h-3">
+      <li className="flex items-center secondary-text-color text-[13px] pr-3 h-3">
         <Link to="/">About Us</Link>
       </li>
-      <li className="flex items-center secondary-text-color text-[13px] border-r-2 border-gray-300 pr-3 h-3">
+      <li className="flex items-center secondary-text-color text-[13px] pr-3 h-3">
         <Link to="/">My Account</Link>
       </li>
-      <li className="flex items-center secondary-text-color text-[13px] border-r-2 border-gray-300 pr-3 h-3">
+      <li className="flex items-center secondary-text-color text-[13px] pr-3 h-3">
         <Link to="/">Wishlist</Link>
       </li>
       <li className="flex items-center secondary-text-color text-[13px] pr-4">
@@ -54,7 +54,7 @@ export default function Home_header() {
   return (
     <section className="hidden lg:block">
       <div className=" lg:pt-5 justify-around flex">
-          <div className="navbar-start  hidden lg:flex">{header_links}</div>
+          <div className="navbar-start ju  hidden lg:flex">{header_links}</div>
         <div className="navbar-center hidden lg:flex">
           <p className="text-[14px] primary-text-color font-bold">
             100% Secure delivery without contacting the courier

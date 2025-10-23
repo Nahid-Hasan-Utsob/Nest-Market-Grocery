@@ -57,7 +57,7 @@ export default function Home_Banner() {
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 group-hover:bg-black/50 transition-all duration-300"></div>
+          <div className="absolute inset-0 group-hover:bg-black/20 transition-all duration-300"></div>
 
           {/* Text + Button */}
           <div className="quicksand-regular text-2xl w-4/5 font-bold absolute inset-0 flex flex-col justify-center items-start md:px-8 px-3 z-10">

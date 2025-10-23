@@ -66,7 +66,7 @@ export default function RandomProductsSection({ products }) {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0  group-hover:bg-black/50 transition-all duration-300"></div>
+              <div className="absolute inset-0  group-hover:bg-black/20 transition-all duration-300"></div>
 
               {/* Text + Button */}
               <div className="quicksand-regular text-2xl  w-2/3 font-bold absolute inset-0 flex flex-col justify-center items-start  px-8 z-10">

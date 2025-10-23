@@ -18,7 +18,7 @@ export default function NavBar() {
         </div>
 
         {/* Wishlist */}
-        <div className="flex items-center gap-3 secondary-text-color ato-regular text-base">
+        {/* <div className="flex items-center gap-3 secondary-text-color ato-regular text-base">
           <div className="relative lg:inline-block hidden">
             <FiHeart className="lg:w-7 lg:h-7 w-6 h-6 text-black" />
             <span className="absolute lg:-top-1 -top-2 -right-1 primary-bg-color text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
@@ -26,7 +26,7 @@ export default function NavBar() {
             </span>
           </div>
           <p className="hidden md:block">Wishlist</p>
-        </div>
+        </div> */}
 
         {/* ✅ Common Cart Component */}
         <CartIcon />

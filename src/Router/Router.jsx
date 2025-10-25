@@ -2,9 +2,6 @@ import { createBrowserRouter } from "react-router";
 import About_us from "../Pages/About_Us/About_us";
 import Home from "../Home_Pages/Home";
 
-import Wishlist from "../Pages/Wishlist/Wishlist";
-import OrderTracking from "../Pages/Order_Tracking/OrderTracking";
-import Account from "../Pages/My_Account/Account.JSX";
 import Contuct_Us from "../Pages/Contuct_Us/Contuct_Us";
 import Shops from "../Pages/Shops/Shops";
 import Blogs from "../Pages/Blogs/Blogs";
@@ -12,7 +9,7 @@ import Main_Layout from "../Layout/Main_Layout";
 import Cart from "../Pages/Cart/Cart";
 import Product_Details from "../Pages/Product_Details.jsx/Product_Card/Product_Details";
 
-
+//ad
 const router = createBrowserRouter([
   {
     path: "/",
